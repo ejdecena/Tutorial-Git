@@ -89,7 +89,6 @@ La siguiente figura muestra el esquema de flujo de trabajo local de *Git*:
 
 ![](imagenes/git_flujo_trabajo.png)
 
-
 ### 1. Fase 1: "Working Directory".
 
 En esta fase podemos hacer cualquier cambio en los archivos y no afectar nuestro repositorio en lo absoluto. En cuanto modificamos algo en nuestro código, éste tendrá status de *modificado*. Si ejecutamos el comando `git status` nos mostrará qué archivos han sido modificados (creados o eliminados).
