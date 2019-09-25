@@ -9,7 +9,7 @@
 
 * [Ing. Edgard Decena.](mailto:edecena@gmail.com)
 * [Ing. Luís Acevedo.](mailto:laar19@protonmail.com)
-<br/>
+
 
 ## ¿Qué es GIT?
 
@@ -18,7 +18,7 @@
 1. Trabajar en equipo de una manera simple y óptima cuando estemos desarrollando software.
 
 2. Controlar todos los cambios en el código fuente, pudiendo volver atrás en el tiempo y abrir diferentes ramas de desarrollo.
-<br/>
+
 
 ## Instalación y configuración.
 
@@ -62,7 +62,7 @@ Para obtener ayuda de cualquier comando de *Git* el comando más usado es:
 git help [comando]
 ```
 Sin embargo, existen dos formas adicionales para obtener ayuda de *Git* que se pueden consultar [**aquí**](https://git-scm.com/book/es/v2/Inicio---Sobre-el-Control-de-Versiones-¿Cómo-obtener-ayuda%3F)
-<br/>
+
 
 ## Crear nuevos repositorios.
 
@@ -71,15 +71,15 @@ Con *Git*  se puede crear un nuevo repositorio básicamente de dos maneras:
 1. Convirtiendo una carpeta (directorio) en repositorio ejecutando la instrucción `git init` dentro del directorio; o también, si el directorio no existe, puede crearse con el comando `git init [nuevo_repositorio]` que automáticamente creará el nuevo_repositorio.
 
 2. La otra forma de crear un nuevo repositorio es *clonándolo* desde otra ubicación con el comando `git clone [nombre_repositorio] [dirección URL/URI]`. Por defecto *Git* establece [nombre_repositorio] a *origin* si no se especifica. Por ejemplo, para clonar este repositorio localmente basta con hacer `git clone https://github.com/ejdecena/tutorial_git.git`. Si se quiere clonar el repositorio a un directorio con otro nombre distinto al original, se puede especificar un tercer parámetro al comando `git clone [nombre_repositorio] [dirección URL/URI] [nombre_directorio]`. Por ejemplo el comando `git clone https://github.com/ejdecena/tutorial_git.git mi_repo` creará un directorio `mi_repo` con el repositorio clonado.
-<br/>
+
 
 ## Flujo de trabajo local.
 
-Los archivos en *Git* pasan por 3 diferentes fases:
+Los archivos en *Git* pasan por 3 fases diferentes:
 
-1. *Working Area* (Área de Trabajo).
-2. *Staging Área* (Área de Preparación).
-3.  *Git Repository* (Repositorio Git).
+1. **_Working Area_** (Área de Trabajo).
+2. **_Staging Área_** (Área de Preparación).
+3. **_Git Repository_** (Repositorio Git).
 
 La siguiente figura muestra el esquema de flujo de trabajo local de *Git*:
 
@@ -95,19 +95,21 @@ Cuando se pasan los archivos del *Working Directory* al *Staging Area*, se cambi
 
 ### Fase 2: "Staging Area".
 
-Para pasar nuestro código del *Staging Area* al *Git Repository* lo hacemos con el comando `git commit -m "Cambios agregados."`. Cuando hacemos el `commit` el código pasa del estado *preparado* a *confirmado*.
+Para pasar nuestro código del *Staging Area* al *Git Repository* lo hacemos con el comando `git commit -m "Cambios agregados."`. Cuando hacemos el `commit` el código pasa del estado *preparado* a *confirmado*. Para **devolver** un archivo del *Staging Área* al *Working Directory* debe ejecutarse `git reset HEAD [file]`.
 
 ### Fase 3: "Git repository".
 
 Una vez que el código esta *confirmado* ya está listo para actualizarse con un servidor remoto de *Git* (GitHub, GitLab, Bitbucket, etc.) como veremos más adelante.
-<br/>
+
+### Ignorar archivos.
+
+A veces será deseable que *Git* no añada automáticamente algunos archivos o directorios al *Working Directory*, o que simplemente estos archivos o directorios no aparezcan como no rastreados. Este suele ser el caso de archivos generados automáticamente, como trazas o archivos creados por tu sistema de compilación. En estos casos, puedes crear un archivo llamado `.gitignore` que liste patrones a considerar para evitar que estos archivos sean tomados en cuenta por *Git*. Podemos encontrar varios ejemplos del archivo `.gitignore` [**aquí**](https://git-scm.com/book/es/v2/Fundamentos-de-Git-Guardando-cambios-en-el-Repositorio).
+
 
 ## Creación y gestión de ramas.
 
-<br/>
 
 ## Agregar y gestionar repositorios remotos.
 
-<br/>
 
 ## Participando en proyectos de GitHub.
