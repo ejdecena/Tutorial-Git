@@ -113,3 +113,5 @@ A veces será deseable que *Git* no añada automáticamente algunos archivos o d
 
 
 ## Participando en proyectos de GitHub.
+
+[Guías de GitHub](https://guides.github.com/)
