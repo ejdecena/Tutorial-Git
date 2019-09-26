@@ -130,7 +130,7 @@ git commit -m "Agregando nueva función."
 git add .
 git commit -m "Se refactorizó las clases no asociadas."
 ```
-2. Agrega todos los cambios en el *Working Directory* **directamente** al *Git Repository* (se omite el paso 2):
+2. Agrega todos los cambios del *Working Directory* **directamente** al *Git Repository* (se omite el paso 2):
 ```bash
 git commit -am "Agregando nueva función."
 ```
