@@ -35,7 +35,7 @@ Luego de la instalación deberán establecerse las **variables de configuración
 
 ### Estableciendo la identidad del usuario.
 
-Lo primero que debe hacerse luego de instalar *Git* es **establecer la identidad del usuario**. Esto es importante porque los *commits* de *Git* usan esta información que de manera automática en todos los *commits* que se hagan en el repositorio.
+Lo primero que debe hacerse luego de instalar *Git* es **establecer la identidad del usuario**. Esto es importante porque los *commits* de *Git* usan esta información de manera automática en todos los *commits* que se hagan en el repositorio.
 
 Las principales variables de configuración son el **nombre de usuario** y el **email**. Para establecer estas variables hay que ejecutar en la terminal las siguientes instrucciones:
 
@@ -54,15 +54,15 @@ color.branch=auto
 color.interactive=auto
 color.diff=auto
 ```
-Opcionalmente también pudieran establecerse el editor por defecto a usar para los *commits* y establecer mostrar sólo una línea por cada commit en la traza:
+Opcionalmente también pueden establecerse el **editor** por defecto a usar para los *commits*, y establecer mostar sólo una línea por cada `commit` en la traza:
 ```bash
-$ git config --global core.editor
+$ git config --global core.editor [nombre-editor]
 $ git config --global format.pretty oneline
 ```
 
 ### Obteniendo ayuda.
 
-Para obtener ayuda de cualquier comando de *Git* podemos usar:
+Para obtener ayuda sobre cualquier comando de *Git* podemos usar:
 ```bash
 $ git help [comando]
 ```
@@ -72,9 +72,9 @@ Sin embargo, existen dos formas adicionales para obtener ayuda de *Git* que se p
 
 Con *Git*  se pueden crear nuevos repositorios básicamente de dos maneras:
 
-1. Convirtiendo una carpeta (directorio) en repositorio ejecutando la instrucción `git init` dentro del directorio; o también, si el directorio no existe, puede crearse con el comando `git init [nuevo_repositorio]` que automáticamente creará el `nuevo_repositorio`.
+1. Convirtiendo una carpeta (directorio) en repositorio ejecutando la instrucción `git init` dentro del directorio; o también, si el directorio no existe, puede crearse con el comando `git init [nuevo-repositorio]` que automáticamente creará el `nuevo-repositorio`.
 
-2. La otra forma de crear un nuevo repositorio es *clonándolo* desde otra ubicación con el comando `git clone [nombre_repositorio] [dirección URL/URI]`. Por defecto *Git* establece [nombre_repositorio] a *origin* si no se especifica. Por ejemplo, para clonar este repositorio localmente basta con hacer `git clone https://github.com/ejdecena/tutorial_git.git`, el cual creará un directorio local con el nombre de *tutorial_git*. Si se quiere clonar el repositorio a un directorio con otro nombre distinto al original, se puede especificar un tercer parámetro al comando `git clone [nombre_repositorio] [dirección URL/URI] [nombre_directorio]`. Por ejemplo el comando `git clone https://github.com/ejdecena/tutorial_git.git mi_repo` creará el directorio `mi_repo` con el repositorio clonado.
+2. La otra forma de crear un nuevo repositorio es *clonándolo* desde otra ubicación con el comando `git clone [nombre-repositorio] [dirección URL/URI]`. Por defecto *Git* establece [nombre-repositorio] a *origin* si no se especifica. Por ejemplo, para clonar este repositorio localmente basta con hacer `git clone https://github.com/ejdecena/tutorial_git.git`, el cual creará un directorio local con el nombre de *tutorial_git*. Si se quiere clonar el repositorio a un directorio con otro nombre distinto al original, se puede especificar un tercer parámetro al comando `git clone [nombre-repositorio] [dirección URL/URI] [nombre-directorio]`. Por ejemplo el comando `git clone https://github.com/ejdecena/tutorial_git.git mi_repo` creará el directorio `mi_repo` con el repositorio clonado.
 
 
 ## Flujo de trabajo local.
