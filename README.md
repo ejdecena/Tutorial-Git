@@ -13,9 +13,9 @@
 
 ## ¿Qué es GIT?
 
-[GIT](https://git-scm.com/book/es/v2) es un [sistema de control de versiones](https://es.wikipedia.org/wiki/Control_de_versiones) que nos va a permitir:
+[GIT](https://git-scm.com/book/es/v2) es un [sistema de control de versiones](https://es.wikipedia.org/wiki/Control_de_versiones) que nos permite:
 
-1. Trabajar en equipo de una manera simple y óptima cuando estemos desarrollando software.
+1. Trabajar en equipo de manera simple y óptima mientras estemos desarrollando software.
 
 2. Controlar todos los cambios en el código fuente, pudiendo volver atrás en el tiempo y abrir diferentes ramas de desarrollo.
 
@@ -35,9 +35,9 @@ Luego de la instalación deberán establecerse las variables de configuración d
 
 ### Estableciendo la identidad del usuario.
 
-Lo primero que deberá hacerse luego de instalar *Git* es establecer la **identidad** del usuario. Esto es importante porque los *commits* de *Git* usan esta información que es introducida de manera automática en todos los commits que se hagan.
+Lo primero que debe hacerse luego de instalar *Git* es establecer la **identidad** del usuario. Esto es importante porque los *commits* de *Git* usan esta información que es introducida de manera automática en todos los *commits* que se hagan en el repositorio.
 
-Las principales variables de configuración son el **nombre de usuario** y el **email**. Para establecerlos hay que ejecutar en el terminal las siguientes instrucciones:
+Las principales variables de configuración son el **nombre de usuario** y el **email**. Para establecerlos hay que ejecutar en la terminal las siguientes instrucciones:
 
 ```bash 
 git config --global user.name "Pedro Pérez"
@@ -57,7 +57,7 @@ color.diff=auto
 
 ### Obteniendo ayuda.
 
-Para obtener ayuda de cualquier comando de *Git* el comando más usado es:
+Para obtener ayuda de cualquier comando de *Git* podemos usar:
 ```bash
 git help [comando]
 ```
@@ -70,7 +70,7 @@ Con *Git*  se puede crear un nuevo repositorio básicamente de dos maneras:
 
 1. Convirtiendo una carpeta (directorio) en repositorio ejecutando la instrucción `git init` dentro del directorio; o también, si el directorio no existe, puede crearse con el comando `git init [nuevo_repositorio]` que automáticamente creará el nuevo_repositorio.
 
-2. La otra forma de crear un nuevo repositorio es *clonándolo* desde otra ubicación con el comando `git clone [nombre_repositorio] [dirección URL/URI]`. Por defecto *Git* establece [nombre_repositorio] a *origin* si no se especifica. Por ejemplo, para clonar este repositorio localmente basta con hacer `git clone https://github.com/ejdecena/tutorial_git.git`. Si se quiere clonar el repositorio a un directorio con otro nombre distinto al original, se puede especificar un tercer parámetro al comando `git clone [nombre_repositorio] [dirección URL/URI] [nombre_directorio]`. Por ejemplo el comando `git clone https://github.com/ejdecena/tutorial_git.git mi_repo` creará un directorio `mi_repo` con el repositorio clonado.
+2. La otra forma de crear un nuevo repositorio es *clonándolo* desde otra ubicación con el comando `git clone [nombre_repositorio] [dirección URL/URI]`. Por defecto *Git* establece [nombre_repositorio] a *origin* si no se especifica. Por ejemplo, para clonar este repositorio localmente basta con hacer `git clone https://github.com/ejdecena/tutorial_git.git`, el cual creará un directorio local con el nombre de *tutorial_git*. Si se quiere clonar el repositorio a un directorio con otro nombre distinto al original, se puede especificar un tercer parámetro al comando `git clone [nombre_repositorio] [dirección URL/URI] [nombre_directorio]`. Por ejemplo el comando `git clone https://github.com/ejdecena/tutorial_git.git mi_repo` creará el directorio `mi_repo` con el repositorio clonado.
 
 
 ## Flujo de trabajo local.
@@ -89,13 +89,13 @@ La siguiente figura muestra el esquema de flujo de trabajo local de *Git*:
 
 En esta fase podemos hacer cualquier cambio en los archivos y no afectar nuestro repositorio (*Git Repository*) en lo absoluto. En cuanto modificamos algo en nuestro código, éste tendrá status de *modificado*. Si ejecutamos el comando `git status` nos mostrará qué archivos han sido modificados (creados o eliminados).
 
-Una vez que hemos hecho los cambios necesarios, pasamos nuestros archivos al *Staging Area* (*Index*) con el comando `git add archivo.py`. Si existen más archivos modificados los podemos listar todos en el comando anterior `git add archivo1.py archivo2.py ...`, o también con el comando `git add .` agregamos **todos** los archivos modificados del *Working Directory* al *Staging Area*.
+Una vez que hemos hecho los cambios necesarios, pasamos nuestros archivos al *Staging Area* (*Index*) con el comando `git add archivo.py`. Si existen más archivos modificados que queramos pasar podemos listarlos con `git add archivo1.py archivo2.py ...`, o también con el comando `git add .` agregamos **todos** los archivos modificados del *Working Directory* al *Staging Area*.
 
-Cuando se pasan los archivos del *Working Directory* al *Staging Area*, se cambia el estado del código de *modificado* a *preparado*. Para deshacer los cambios en el *Working Directory* hasta el último *commit* debe usarse `git checkout -- [archivo]`.
+Cuando se pasan los archivos del *Working Directory* al *Staging Area*, se cambia el estado del código de *modificado* a *preparado*. Para deshacer los cambios en el *Working Directory* hasta el último *commit* debe usarse `git checkout -- [archivo]`. Los archivos que estén en el *Staging Area* no serán modificados.
 
 ### Fase 2: "Staging Area".
 
-Para pasar nuestro código del *Staging Area* al *Git Repository* lo hacemos con el comando `git commit -m "[descripción del commit]"`. Hay distintas modalidades para el comando `git commint`que pueden leerse [**aquí**](). Cuando hacemos el `commit` el código pasa del estado *preparado* a *confirmado*. Para **devolver** un archivo del *Staging Área* al *Working Directory* debe ejecutarse `git reset HEAD [file]`.
+Para pasar nuestro código del *Staging Area* al *Git Repository* lo hacemos con el comando `git commit -m "[descripción del commit]"`. Hay distintas modalidades para el comando `git commit`que pueden leerse [**aquí**](https://git-scm.com/book/es/v2/Fundamentos-de-Git-Guardando-cambios-en-el-Repositorio). Cuando hacemos el `commit` el código pasa del estado *preparado* a *confirmado*. Para **devolver** un archivo del *Staging Área* al *Working Directory* debe ejecutarse `git reset HEAD [archivo]`.
 
 ### Fase 3: "Git repository".
 
@@ -113,7 +113,7 @@ En general el **flujo de trabajo** local básico en *Git* podríamos resumirlo d
 
 En algunos casos el paso 2, pasar los archivos al *Staging Area*, puede omitirse del flujo de trabajo, de tal manera que podemos pasar los archivos directamente del *Working Directory* al *Git Reposiory* añadiendo la opción `-a` al comando `git commit`.
 
-Los sguinetes son ejemplos de *flujos de trabajos* en *Git*:
+Los siguientes son ejemplos de *flujos de trabajos* en *Git*:
 
 1. Agrega el archivo del *Working Directory* al *Staging Area*, y luego al *Git Repository*:
 ```bash
@@ -128,16 +128,22 @@ git commit -m "Agregando nueva función."
 3. Agrega todos los cambios del *Working Directory* al *Staging Area* y luego al *Git Repository*:
 ```bash
 git add .
-git commit -m "Agregando nueva función."
+git commit -m "Se refactorizó las clases no asociadas."
 ```
-2. Agrega todos los cambios en el *Working Directory* directamente al *Git Repository* (se omite el paso 2):
+2. Agrega todos los cambios en el *Working Directory* **directamente** al *Git Repository* (se omite el paso 2):
 ```bash
 git commit -am "Agregando nueva función."
 ```
 
-## Herramientas adicionales
+## Herramientas adicionales.
+
+### Observando las diferencias entre archivos.
 git diff
+
+### Observando la historia de commits.
 git log
+
+### Añadiendo tags a los commits.
 git tag
 
 
