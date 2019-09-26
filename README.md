@@ -108,10 +108,10 @@ A veces será deseable que *Git* no añada algunos archivos o directorios al *Wo
 En general el **flujo de trabajo** local básico en *Git* podríamos resumirlo de la siguiente manera:
 
 1. Modificas una serie de archivos en el *Working Directory*.
-2. Preparas los archivos añadiéndolos al *Staging Area* con el comando `git add`.
-3. Confirmas los cambios pasando los archivos al *Git Repository* con el comando `git commit` haciendo de este modo una copia instantánea y permanente en tu directorio de Git.
+2. Preparas los archivos añadiéndolos al *Staging Area* con `git add`.
+3. Confirmas los cambios con `git commit`, pasando los archivos al *Git Repository* y haciendo de este modo una copia instantánea y permanente en tu directorio de *Git*.
 
-En algunos casos el paso 2, pasar los archivos al *Staging Area*, puede omitirse del flujo de trabajo, de tal manera que podemos pasar los archivos directamente del *Working Directory* al *Git Reposiory* añadiendo la opción `-a` al comando `git commit`.
+En algunos casos el paso 2, pasar los archivos al *Staging Area*, puede omitirse del *flujo de trabajo*, de tal manera que podemos pasar los archivos **directamente** del *Working Directory* al *Git Reposiory* añadiendo la opción `-a` al comando `git commit`.
 
 ### Ejemplos de flujo de trabajo local.
 
@@ -134,18 +134,18 @@ git commit -m "Se refactorizó las clases no asociadas."
 ```bash
 git commit -am "Cambio de formatos."
 ```
-5. Agrega los archivo1.py y archivo2.py del *Working Directory* al *Git Repository*, luego se arrepiente y devuelve el archivo1.py al *Working Area* para finalmente pasar solo el archivo2.py al *Git Repository* (ruta incompleta):
+5. Agrega los `archivo1.py` y `archivo2.py` del *Working Directory* al *Git Repository*, luego se arrepiente y devuelve el archivo1.py al *Working Area* para finalmente pasar solo el archivo2.py al *Git Repository* (ruta incompleta):
 ```bash
 git add archivo1.py archivo2.py
 git reset HEAD archivo1.py
 git commit -m "Corrección del error en el archivo2.py"
 ```
-6. Igual que el ejemplo anterior, luego del *commit* modifica el archivo2.py, se arrepiente de los cambios y lo restituye con la versión del repositorio:
+6. Igual que el ejemplo anterior, luego del *commit* modifica el `archivo2.py`, se arrepiente de los cambios y lo restituye con la versión del repositorio:
 ```bash
 git add archivo1.py archivo2.py
 git reset HEAD archivo1.py
 git commit -m "Corrección del error en el archivo2.py"
-# luego modifica el archivo1.py en el *Working Directory*
+# luego modifica el archivo2.py en el *Working Directory*
 git checkout -- archivo2.py
 ```
 Como podemos notar, en el *flujo de trabajo* local básico solo manejamos 4 comandos:
@@ -156,15 +156,45 @@ Como podemos notar, en el *flujo de trabajo* local básico solo manejamos 4 coma
 
 ## Herramientas adicionales.
 
+Los 4 comandos de la sección anterior son básicos para el *flujo de trabajo* local y de algún modo son suficientes, pero existen 3 comandos adicionales que **complementan** las tareas: `git diff`, `git log` y `git tag`.
+
 ### Observando las diferencias entre archivos.
-git diff
+
+Siempre es posible ver los cambios o diferencias de los archivos en las distintas fases, por ejemplo:
+* `git diff` muestra las diferencias entre los archivos entre el *Working Directory* y *Staging Area*. 
+* `git diff --staged` muestra las diferencias entre los archivos entre el *Staging Area* y el *Git Repository*.
 
 ### Observando la historia de commits.
-git log
+
+También siempre es posible ver el *historial* de cambios del repositorio *Git Repository* con el comando `git log`. Este comando tiene múltiples opciones las cuales pueden leerse [**aquí**](https://git-scm.com/book/es/v2/Fundamentos-de-Git-Ver-el-Historial-de-Confirmaciones).
 
 ### Añadiendo tags a los commits.
-git tag
 
+Cuando vemos el historial de los *commits* con `git log` el repositorio podemos ver algo como esto:
+```bash
+commit eece07985eec4d1ccad5cd8022e6a806086dcbd2
+Author: Edgard Decena <edecena@gmail.com>
+Date:   Thu Sep 26 04:37:46 2019 -0400
+
+    Más ejemplos y resumiendo el flujo de trabajo local básico.
+
+commit 81d19320683852a928d35759b7173b098ac1d126
+Author: Edgard Decena <edecena@gmail.com>
+Date:   Wed Sep 25 23:38:10 2019 -0400
+
+    Correcciones varias.
+
+commit c0961e1ee659f56713e7389fc1e293ff1f68883b
+Author: Edgard Decena <edecena@gmail.com>
+Date:   Wed Sep 25 23:34:52 2019 -0400
+
+    Agregando subtítulos de diff, log y tag. Arreglos varios.
+```
+Sin embargo se recomienda crear **etiquetas** (*tags*) para aquellos *commits* que marquen un *hito* o que sean importantes, como por ejemplo una **versión** del software. Para crear las etiquetas se usa el comando `git tag`. Veamos el siguiente ejemplo:
+```bash
+git tag 1.0.0 eece07985e
+```
+Agrega la etiqueta `1.0.0` al primer commit, el marcado con `eece07985eec4d1ccad5cd8022e6a806086dcbd2`. Nótese que solo usamos los 10 primeros caracteres del hash. El comando `git tag` tiene múltiples opciones las cuales pueden leerse [**aquí**](https://git-scm.com/book/es/v2/Fundamentos-de-Git-Etiquetado). 
 
 ## Creación y gestión de ramas.
 
