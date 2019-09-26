@@ -236,11 +236,11 @@ Hasta ahora hemos trabajado en forma local con nuestro repositorio; sin embargo,
 ```bash
 $ git remote add [nombre-repositorio] [URL/URI]
 ```
-Nuestro repositorio local puede tener establecidos **varios** repositorios remotos, esto en el caso que estemos trabajando con varios colaboradores. Esta flexibilidad es posible porque *Git* es un sistema de control de versiones [**distribuído**], es decir que cada colaborador (*Nodo*) tiene una misma **copia completa** de nuestro repositorio. Para ver una lista de los repositorios remotos linkeados a nuestro repositorio local basta con ejecutar el siguiente comando: 
+Nuestro repositorio local puede tener establecidos **varios** repositorios remotos, esto en el caso que estemos trabajando con varios colaboradores. Esta flexibilidad es posible porque *Git* es un sistema de control de versiones [**distribuído**](https://es.wikipedia.org/wiki/Control_de_versiones_distribuido), es decir que cada colaborador (*Nodo*) tiene una misma **copia completa** de nuestro repositorio. Para ver una lista de los repositorios remotos *linkeados* a nuestro repositorio local basta con ejecutar el siguiente comando: 
 ```bash
 $ git remote -v
 ```
-Si previamente hemos *clonado* un repositorio remoto, automáticamente este repositorio queda establecido y no es necesario ejecutar el `git remote add`.
+Si previamente hemos *clonado* un repositorio remoto, automáticamente este repositorio de donde clonamos **queda establecido**, y no es necesario ejecutar el `git remote add`.
 
 ### Eliminar y renombrar remotos.
 
@@ -276,7 +276,7 @@ Si queremos **fijar** o establecer un *push* por defecto, por ejemplo el `origin
 ```bash
 $ git push -u origin master
 ```
-Así, en el próximo push simplemente ejecutamos
+Así, en el próximo *push* simplemente ejecutamos:
 ```bash
 $ git push
 ```
@@ -286,11 +286,11 @@ y *Git* entenderá que deberá hacer el *push* al `origin master`.
 
 Has **dos** maneras de actualizar el repositorio local con los datos en el repositorio remoto, a través de los comandos `git pull` y `git fetch`.
 
-El comando `git pull [nombre-remoto] [rama-remota]` **automáticamente combinará** (hará un *merge*) de la [rama-remota] con la rama local en la que nos encontremos, por ejemplo si localmente estamos en la rama `master` hará un *merge* con la rama `master` del repositorio remoto.
+* El comando `git pull [nombre-remoto] [rama-remota]` **automáticamente combinará** (hará un *merge*) de la [rama-remota] con la rama local en la que nos encontremos, por ejemplo si localmente estamos en la rama `master` hará un *merge* con la rama `master` del repositorio remoto.
 
-El comando `git fetch [nombre-remoto]` solo trae los datos al repositorio local, es decir **no lo combina automáticamente con tu trabajo ni modifica el trabajo que llevas hecho**. La **combinación** (*merge*) con tu repositorio local **debes hacerla manualmente** cuando estés listo.
+* El comando `git fetch [nombre-remoto]` solo trae los datos al repositorio local, es decir **no lo combina automáticamente con tu trabajo ni modifica el trabajo que llevas hecho**. La **combinación** (*merge*) con tu repositorio local **debes hacerla manualmente** cuando estés listo.
 
-En todo repositorio local existe una **rama oculta** que puedes ver al usar `git branch -a`, esa rama oculta es `origin/master`. Al usar `git fetch` bajas los cambios del repositorio remoto a la rama oculta `origin/master`, luego tendrías que hacer un *merge* para combinarla con tu rama local haciendo `git merge origin/master`.
+En todo repositorio local existe una **rama oculta** que puedes ver al ejecutar `git branch -a`, esa rama oculta es `origin/master`. Al usar `git fetch` bajas los cambios del repositorio remoto a la rama oculta `origin/master`, luego tendrías que hacer un *merge* para combinarla con tu rama local haciendo `git merge origin/master`.
 
 ## Participando en proyectos de GitHub.
 [en progreso]
