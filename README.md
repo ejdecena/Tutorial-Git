@@ -15,7 +15,7 @@
 
 [GIT](https://git-scm.com/book/es/v2) es un [sistema de control de versiones](https://es.wikipedia.org/wiki/Control_de_versiones) que nos permite:
 
-1. Trabajar en equipo de forma remota, simple y óptima mientras estemos desarrollando software.
+1. Trabajar en equipo de forma remota, simple y óptima mientras estamos desarrollando software.
 
 2. Controlar todos los cambios en el código fuente, pudiendo volver atrás en el tiempo y abrir diferentes ramas de desarrollo.
 
@@ -75,7 +75,7 @@ Con *Git*  se puede crear un nuevo repositorio básicamente de dos maneras:
 
 ## Flujo de trabajo local.
 
-Los archivos en *Git* pasan por 3 fases diferentes:
+Los archivos en *Git* pasan por 3 fases diferentes en forma local:
 
 1. **_Working Directory_** (Directorio de Trabajo).
 2. **_Staging Área_** (Área de Preparación o *Index*).
@@ -91,7 +91,7 @@ En esta fase podemos hacer cualquier cambio en los archivos y no afectar nuestro
 
 Una vez que hemos hecho los cambios necesarios, pasamos nuestros archivos al *Staging Area* (*Index*) con el comando `git add archivo.py`. Si existen más archivos modificados que queramos pasar podemos listarlos con `git add archivo1.py archivo2.py ...`, o también con el comando `git add .` agregamos **todos** los archivos modificados del *Working Directory* al *Staging Area*.
 
-Cuando se pasan los archivos del *Working Directory* al *Staging Area*, se cambia el estado del código de *modificado* a *preparado*. Para deshacer los cambios en el *Working Directory* hasta el último *commit* debe usarse `git checkout -- [archivo]`. Los archivos que estén en el *Staging Area* no serán modificados.
+Cuando se pasan los archivos del *Working Directory* al *Staging Area*, se cambia el estado del código de *modificado* a *preparado*. Para **deshacer** los cambios en el *Working Directory* con el último *commit* debe usarse el comando `git checkout -- [archivo]`. Los archivos que estén en el *Staging Area* no serán modificados.
 
 ### Fase 2: "Staging Area".
 
