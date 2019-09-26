@@ -15,7 +15,7 @@
 
 [GIT](https://git-scm.com/book/es/v2) es un [sistema de control de versiones](https://es.wikipedia.org/wiki/Control_de_versiones) que nos permite:
 
-1. Trabajar en equipo de manera simple y óptima mientras estemos desarrollando software.
+1. Trabajar en equipo de forma remota, simple y óptima mientras estemos desarrollando software.
 
 2. Controlar todos los cambios en el código fuente, pudiendo volver atrás en el tiempo y abrir diferentes ramas de desarrollo.
 
@@ -170,7 +170,7 @@ También siempre es posible ver el *historial* de cambios del repositorio *Git R
 
 ### Añadiendo tags a los commits.
 
-Cuando vemos el historial de los *commits* con `git log` el repositorio podemos ver algo como esto:
+Cuando vemos el historial de los *commits* con `git log` podemos ver algo como esto:
 ```bash
 commit eece07985eec4d1ccad5cd8022e6a806086dcbd2
 Author: Edgard Decena <edecena@gmail.com>
@@ -198,10 +198,35 @@ Agrega la etiqueta `1.0.0` al primer commit, el marcado con `eece07985eec4d1ccad
 
 ## Creación y gestión de ramas.
 
+El manejo de *ramas* es muy sencillo en *Git* y básicamente se reduce a 3 comandos:
+
+* `git branch [nombre_rama]` **crea** la rama `nombre_rama`. Si se omite el parámetro `nombre_rama` el comando muestra todas las ramas del repositorio.
+* `git checkout [nombre_rama]` nos **cambia** a la rama `nombre_rama`.
+* `git checkout -b [nombre_rama]` **crea** la rama `nombre_rama` y nos **cambia** de una vez a la rama.
+* `git checkout -d [nombre_rama]` **elimina** la rama [nombre_rama].
+
+Siempre vamos a tener una rama `master` que será la rama principal. Supongamos que creamos la rama `desarrollo` para hacer pruebas:
+```bash
+git checkout -b desarrollo
+```
+En `desarrollo` creamos nuevos archivos y modificamos archivos ya existentes. Para **unir** (*merge*) estos cambios a la rama `master` primero tenemos que hacer *commit* en `desarrollo` y luego **cambiarnos** a la rama `master` así:
+```bash
+git commit -am "Agregando cambios finales a desarrollo."
+git checkout master
+```
+Estando ya en la rama `master` podemos **unir** (*merge*) los cambios en `desarrollo` así:
+```bash
+git merge desarrollo
+```
+Luego si todo fue OK podemos eliminar la rama `desarrollo` así:
+```bash
+git checkout -d desarrollo
+```
+Cuando se hace el *merge* es posible que hayan conflictos al tratar de cambiar archivos que ya tengan otros cambios, estos conflictos deberán resolverse manualmente antes de intentar un nuevo *merge*. Para obtener más información sobre el manejo de las ramas podemos ir [**aquí**](https://git-scm.com/book/es/v2/Ramificaciones-en-Git-¿Qué-es-una-rama%3F).
 
 ## Agregar y gestionar repositorios remotos.
-
+[en progreso]
 
 ## Participando en proyectos de GitHub.
-
+[en progreso]
 [Guías de GitHub](https://guides.github.com/)
