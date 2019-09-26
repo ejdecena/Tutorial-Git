@@ -29,7 +29,7 @@ sudo apt-get install git
 ```
 Para la instalación en otros sistemas operativos se puede consultar [**aquí**](https://git-scm.com/book/es/v2/Inicio---Sobre-el-Control-de-Versiones-Instalación-de-Git).
 
-Luego de la instalación deberán hacerse algunas cosas adicionales para personalizar el entorno de *Git*. Es necesario hacer estas cosas **solamente una vez** en el computador, ya que estas se mantendrán entre actualizaciones. También se puede cambiarlas en cualquier momento, volviendo a ejecutar los comandos correspondientes.
+Luego de la instalación deberán establecerse las variables de configuración de *Git* para personalizar el entorno de trabajo. Es necesario hacer esta configuración **solamente una vez** en el computador, ya que estas variables se mantendrán entre actualizaciones. También se pueden cambiar estas variables en cualquier momento, volviendo a ejecutar los comandos correspondientes.
 
 *Git* trae una herramienta llamada `git config`, que nos permite establecer y obtener variables de configuración; dichas variables de configuración controlan el aspecto y funcionamiento de *Git.*
 
@@ -77,9 +77,9 @@ Con *Git*  se puede crear un nuevo repositorio básicamente de dos maneras:
 
 Los archivos en *Git* pasan por 3 fases diferentes:
 
-1. **_Working Area_** (Área de Trabajo).
-2. **_Staging Área_** (Área de Preparación).
-3. **_Git Repository_** (Repositorio Git).
+1. **_Working Directory_** (Directorio de Trabajo).
+2. **_Staging Área_** (Área de Preparación o *Index*).
+3. **_Git Repository_** (Repositorio Git o *HEAD*).
 
 La siguiente figura muestra el esquema de flujo de trabajo local de *Git*:
 
@@ -87,15 +87,15 @@ La siguiente figura muestra el esquema de flujo de trabajo local de *Git*:
 
 ### 1. Fase 1: "Working Directory".
 
-En esta fase podemos hacer cualquier cambio en los archivos y no afectar nuestro repositorio en lo absoluto. En cuanto modificamos algo en nuestro código, éste tendrá status de *modificado*. Si ejecutamos el comando `git status` nos mostrará qué archivos han sido modificados (creados o eliminados).
+En esta fase podemos hacer cualquier cambio en los archivos y no afectar nuestro repositorio (*Git Repository*) en lo absoluto. En cuanto modificamos algo en nuestro código, éste tendrá status de *modificado*. Si ejecutamos el comando `git status` nos mostrará qué archivos han sido modificados (creados o eliminados).
 
-Una vez que hemos hecho los cambios necesarios, pasamos nuestros archivos al *staging area* con el comando `git add archivo.py`. Si existen más archivos modificados los podemos listar todos en el comando anterior `git add archivo1.py archivo2.py ...`, o también con el comando `git add .` agregamos **todos** los archivos modificados del *working directory* al *staging area*.
+Una vez que hemos hecho los cambios necesarios, pasamos nuestros archivos al *Staging Area* (*Index*) con el comando `git add archivo.py`. Si existen más archivos modificados los podemos listar todos en el comando anterior `git add archivo1.py archivo2.py ...`, o también con el comando `git add .` agregamos **todos** los archivos modificados del *Working Directory* al *Staging Area*.
 
-Cuando se pasan los archivos del *Working Directory* al *Staging Area*, se cambia el estado del código de *modificado* a *preparado*.
+Cuando se pasan los archivos del *Working Directory* al *Staging Area*, se cambia el estado del código de *modificado* a *preparado*. Para deshacer los cambios en el *Working Directory* hasta el último *commit* debe usarse `git checkout -- [archivo]`.
 
 ### Fase 2: "Staging Area".
 
-Para pasar nuestro código del *Staging Area* al *Git Repository* lo hacemos con el comando `git commit -m "Cambios agregados."`. Cuando hacemos el `commit` el código pasa del estado *preparado* a *confirmado*. Para **devolver** un archivo del *Staging Área* al *Working Directory* debe ejecutarse `git reset HEAD [file]`.
+Para pasar nuestro código del *Staging Area* al *Git Repository* lo hacemos con el comando `git commit -m "[descripción del commit]"`. Hay distintas modalidades para el comando `git commint`que pueden leerse [**aquí**](). Cuando hacemos el `commit` el código pasa del estado *preparado* a *confirmado*. Para **devolver** un archivo del *Staging Área* al *Working Directory* debe ejecutarse `git reset HEAD [file]`.
 
 ### Fase 3: "Git repository".
 
@@ -103,7 +103,42 @@ Una vez que el código esta *confirmado* ya está listo para actualizarse con un
 
 ### Ignorar archivos.
 
-A veces será deseable que *Git* no añada automáticamente algunos archivos o directorios al *Working Directory*, o que simplemente estos archivos o directorios no aparezcan como no rastreados. Este suele ser el caso de archivos generados automáticamente, como trazas o archivos creados por tu sistema de compilación. En estos casos, puedes crear un archivo llamado `.gitignore` que liste patrones a considerar para evitar que estos archivos sean tomados en cuenta por *Git*. Podemos encontrar varios ejemplos del archivo `.gitignore` [**aquí**](https://git-scm.com/book/es/v2/Fundamentos-de-Git-Guardando-cambios-en-el-Repositorio).
+A veces será deseable que *Git* no añada algunos archivos o directorios al *Working Directory*, o que simplemente estos archivos o directorios no aparezcan como no rastreados. Este suele ser el caso de archivos generados automáticamente o archivos de backup, etc. En estos casos, puedes crear un archivo llamado `.gitignore` que liste patrones a considerar para evitar que estos archivos sean tomados en cuenta por *Git*. Podemos encontrar varios ejemplos del archivo `.gitignore` [**aquí**](https://git-scm.com/book/es/v2/Fundamentos-de-Git-Guardando-cambios-en-el-Repositorio).
+
+En general el **flujo de trabajo** local básico en *Git* podríamos resumirlo de la siguiente manera:
+
+1. Modificas una serie de archivos en el *Working Directory*.
+2. Preparas los archivos añadiéndolos al *Staging Area* con el comando `git add`.
+3. Confirmas los cambios pasando los archivos al *Git Repository* con el comando `git commit` haciendo de este modo una copia instantánea y permanente en tu directorio de Git.
+
+En algunos casos el paso 2, pasar los archivos al *Staging Area*, puede omitirse del flujo de trabajo, de tal manera que podemos pasar los archivos directamente del *Working Directory* al *Git Reposiory* añadiendo la opción `-a` al comando `git commit`.
+
+Los sguinetes son ejemplos de *flujos de trabajos* en *Git*:
+
+1. Agrega el archivo del *Working Directory* al *Staging Area*, y luego al *Git Repository*:
+```bash
+git add archivo1.py
+git commit -m "Corrección de error."
+```
+2. Agrega los archivos del *Working Directory* al *Staging Area*, y luego al *Git Repository*:
+```bash
+git add archivo1.py archivo2.py archivo3.py
+git commit -m "Agregando nueva función."
+```
+3. Agrega todos los cambios del *Working Directory* al *Staging Area* y luego al *Git Repository*:
+```bash
+git add .
+git commit -m "Agregando nueva función."
+```
+2. Agrega todos los cambios en el *Working Directory* directamente al *Git Repository* (se omite el paso 2):
+```bash
+git commit -am "Agregando nueva función."
+```
+
+## Herramientas adicionales
+git diff
+git log
+git tag
 
 
 ## Creación y gestión de ramas.
