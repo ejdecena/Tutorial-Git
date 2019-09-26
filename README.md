@@ -85,7 +85,7 @@ La siguiente figura muestra el esquema de flujo de trabajo local de *Git*:
 
 ![](imagenes/git_flujo_trabajo.png)
 
-### 1. Fase 1: "Working Directory".
+### Fase 1: "Working Directory".
 
 En esta fase podemos hacer cualquier cambio en los archivos y no afectar nuestro repositorio (*Git Repository*) en lo absoluto. En cuanto modificamos algo en nuestro código, éste tendrá status de *modificado*. Si ejecutamos el comando `git status` nos mostrará qué archivos han sido modificados (creados o eliminados).
 
@@ -113,27 +113,46 @@ En general el **flujo de trabajo** local básico en *Git* podríamos resumirlo d
 
 En algunos casos el paso 2, pasar los archivos al *Staging Area*, puede omitirse del flujo de trabajo, de tal manera que podemos pasar los archivos directamente del *Working Directory* al *Git Reposiory* añadiendo la opción `-a` al comando `git commit`.
 
-Los siguientes son ejemplos de *flujos de trabajos* en *Git*:
+### Ejemplos de flujo de trabajo local.
 
-1. Agrega el archivo del *Working Directory* al *Staging Area*, y luego al *Git Repository*:
+1. Agrega el archivo del *Working Directory* al *Staging Area* y luego al *Git Repository* (ruta completa):
 ```bash
 git add archivo1.py
 git commit -m "Corrección de error."
 ```
-2. Agrega los archivos del *Working Directory* al *Staging Area*, y luego al *Git Repository*:
+2. Agrega los archivos del *Working Directory* al *Staging Area* y luego al *Git Repository* (ruta completa):
 ```bash
 git add archivo1.py archivo2.py archivo3.py
 git commit -m "Agregando nueva función."
 ```
-3. Agrega todos los cambios del *Working Directory* al *Staging Area* y luego al *Git Repository*:
+3. Agrega **todos** los cambios del *Working Directory* al *Staging Area* y luego al *Git Repository* (ruta completa):
 ```bash
 git add .
 git commit -m "Se refactorizó las clases no asociadas."
 ```
-2. Agrega todos los cambios del *Working Directory* **directamente** al *Git Repository* (se omite el paso 2):
+4. Agrega todos los cambios del *Working Directory* **directamente** al *Git Repository* (se omite el paso 2 pero ruta completa):
 ```bash
-git commit -am "Agregando nueva función."
+git commit -am "Cambio de formatos."
 ```
+5. Agrega los archivo1.py y archivo2.py del *Working Directory* al *Git Repository*, luego se arrepiente y devuelve el archivo1.py al *Working Area* para finalmente pasar solo el archivo2.py al *Git Repository* (ruta incompleta):
+```bash
+git add archivo1.py archivo2.py
+git reset HEAD archivo1.py
+git commit -m "Corrección del error en el archivo2.py"
+```
+6. Igual que el ejemplo anterior, luego del *commit* modifica el archivo2.py, se arrepiente de los cambios y lo restituye con la versión del repositorio:
+```bash
+git add archivo1.py archivo2.py
+git reset HEAD archivo1.py
+git commit -m "Corrección del error en el archivo2.py"
+# luego modifica el archivo1.py en el *Working Directory*
+git checkout -- archivo2.py
+```
+Como podemos notar, en el *flujo de trabajo* local básico solo manejamos 4 comandos:
+1. `git add` para pasar los cambios del *Working Directory* al *Staging Area*.
+2. `git commit` para pasar los cambios del *Staging Area* al *Git Repository*.
+3. `git reset HEAD` para **retroceder** y pasar los cambios del *Staging Area* al *Working Directory*
+4. `git checkout --` para **retroceder** y pasar los cambios del *Git Repository* al *Working Directory*.
 
 ## Herramientas adicionales.
 
