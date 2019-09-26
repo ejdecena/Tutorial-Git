@@ -288,7 +288,7 @@ Has **dos** maneras de actualizar el repositorio local con los datos en el repos
 
 * El comando `git pull [nombre-remoto] [rama-remota]` **automáticamente combinará** (hará un *merge*) de la [rama-remota] con la rama local en la que nos encontremos, por ejemplo si localmente estamos en la rama `master` hará un *merge* con la rama `master` del repositorio remoto.
 
-* El comando `git fetch [nombre-remoto]` solo trae los datos al repositorio local, es decir **no lo combina automáticamente con tu trabajo ni modifica el trabajo que llevas hecho**. La **combinación** (*merge*) con tu repositorio local **debes hacerla manualmente** cuando estés listo.
+* El comando `git fetch [nombre-remoto]` solo trae los datos al repositorio local, es decir **no los combina automáticamente con tu trabajo ni modifica el trabajo que llevas hecho**. La **combinación** (*merge*) con tu repositorio local **debes hacerla manualmente** cuando estés listo.
 
 En todo repositorio local existe una **rama oculta** que puedes ver al ejecutar `git branch -a`, esa rama oculta es `origin/master`. Al usar `git fetch` bajas los cambios del repositorio remoto a la rama oculta `origin/master`, luego tendrías que hacer un *merge* para combinarla con tu rama local haciendo `git merge origin/master`.
 
