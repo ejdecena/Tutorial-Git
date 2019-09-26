@@ -17,12 +17,12 @@
 
 1. Trabajar en equipo de forma remota, simple y óptima mientras estamos desarrollando software.
 
-2. Controlar todos los cambios en el código fuente, pudiendo volver atrás en el tiempo y abrir diferentes ramas de desarrollo.
+2. Controlar y hacer seguimiento de todos los cambios en el código fuente, pudiendo volver atrás en el tiempo y abrir diferentes ramas de desarrollo.
 
 
 ## Instalación y configuración.
 
-Para instalar *Git* en un sistema operativo *Linux* con paquetería *apt* (*Debian*, *Ubuntu*, etc) basta con ejecutar la siguiente instrucción desde la terminal:
+Para instalar *Git* en un sistema operativo *Linux* con paquetería *apt* (*Debian*, *Ubuntu*, *Linux Mint*, etc) basta con ejecutar el siguiente comando desde la terminal:
 
 ```bash
 sudo apt-get install git
@@ -85,7 +85,7 @@ La siguiente figura muestra el esquema de flujo de trabajo local de *Git*:
 
 ![](imagenes/git_flujo_trabajo.png)
 
-### Fase 1: "Working Directory".
+### Fase 1: *Working Directory*.
 
 En esta fase podemos hacer cualquier cambio en los archivos y no afectar nuestro repositorio (*Git Repository*) en lo absoluto. En cuanto modificamos algo en nuestro código, éste tendrá status de *modificado*. Si ejecutamos el comando `git status` nos mostrará qué archivos han sido modificados (creados o eliminados).
 
@@ -93,11 +93,11 @@ Una vez que hemos hecho los cambios necesarios, pasamos nuestros archivos al *St
 
 Cuando se pasan los archivos del *Working Directory* al *Staging Area*, se cambia el estado del código de *modificado* a *preparado*. Para **deshacer** los cambios en el *Working Directory* con el último *commit* debe usarse el comando `git checkout -- [archivo]`. Los archivos que estén en el *Staging Area* no serán modificados.
 
-### Fase 2: "Staging Area".
+### Fase 2: *Staging Area* (*Index*).
 
 Para pasar nuestro código del *Staging Area* al *Git Repository* lo hacemos con el comando `git commit -m "[descripción del commit]"`. Hay distintas modalidades para el comando `git commit`que pueden leerse [**aquí**](https://git-scm.com/book/es/v2/Fundamentos-de-Git-Guardando-cambios-en-el-Repositorio). Cuando hacemos el `commit` el código pasa del estado *preparado* a *confirmado*. Para **devolver** un archivo del *Staging Área* al *Working Directory* debe ejecutarse `git reset HEAD [archivo]`.
 
-### Fase 3: "Git repository".
+### Fase 3: *Git Repository* (*HEAD*).
 
 Una vez que el código esta *confirmado* ya está listo para actualizarse con un servidor remoto de *Git* (GitHub, GitLab, Bitbucket, etc.) como veremos más adelante.
 
@@ -164,6 +164,8 @@ Siempre es posible ver los cambios o diferencias de los archivos en las distinta
 * `git diff` muestra las diferencias entre los archivos entre el *Working Directory* y *Staging Area*. 
 * `git diff --staged` muestra las diferencias entre los archivos entre el *Staging Area* y el *Git Repository*.
 
+El comando `git diff` tiene múltiples opciones que pueden leerse [**aquí**](https://git-scm.com/book/es/v2/Fundamentos-de-Git-Guardando-cambios-en-el-Repositorio).
+
 ### Observando la historia de commits.
 
 También siempre es posible ver el *historial* de cambios del repositorio *Git Repository* con el comando `git log`. Este comando tiene múltiples opciones las cuales pueden leerse [**aquí**](https://git-scm.com/book/es/v2/Fundamentos-de-Git-Ver-el-Historial-de-Confirmaciones).
@@ -194,7 +196,7 @@ Sin embargo se recomienda crear **etiquetas** (*tags*) para aquellos *commits* q
 ```bash
 git tag 1.0.0 eece07985e
 ```
-Agrega la etiqueta `1.0.0` al primer commit, el marcado con `eece07985eec4d1ccad5cd8022e6a806086dcbd2`. Nótese que solo usamos los 10 primeros caracteres del hash. El comando `git tag` tiene múltiples opciones las cuales pueden leerse [**aquí**](https://git-scm.com/book/es/v2/Fundamentos-de-Git-Etiquetado). 
+Agrega la etiqueta `1.0.0` al primer *commit*, el marcado con el hash `eece07985eec4d1ccad5cd8022e6a806086dcbd2`. Nótese que en el ejemplo solo usamos los 10 primeros caracteres del hash. El comando `git tag` tiene múltiples opciones las cuales pueden leerse [**aquí**](https://git-scm.com/book/es/v2/Fundamentos-de-Git-Etiquetado). 
 
 ## Creación y gestión de ramas.
 
@@ -222,7 +224,7 @@ Luego si todo fue OK podemos eliminar la rama `desarrollo` así:
 ```bash
 git checkout -d desarrollo
 ```
-Cuando se hace el *merge* es posible que hayan conflictos al tratar de cambiar archivos que ya tengan otros cambios, estos conflictos deberán resolverse manualmente antes de intentar un nuevo *merge*. Para obtener más información sobre el manejo de las ramas podemos ir [**aquí**](https://git-scm.com/book/es/v2/Ramificaciones-en-Git-¿Qué-es-una-rama%3F).
+Cuando se hace un *merge* es posible que hayan conflictos al tratar de cambiar archivos que ya tengan otros cambios, estos conflictos deberán **resolverse manualmente** antes de intentar un nuevo *merge*. Para obtener más información sobre el manejo de las ramas podemos ir [**aquí**](https://git-scm.com/book/es/v2/Ramificaciones-en-Git-¿Qué-es-una-rama%3F).
 
 ## Agregar y gestionar repositorios remotos.
 [en progreso]
