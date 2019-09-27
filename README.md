@@ -14,9 +14,9 @@
 ## Índice.
 
 1. ¿Qué es GIT?
-1. Instalación y configuración.
-    1. Estableciendo la identidad del usuario.
-    1. Obteniendo ayuda.
+[1. Instalación y configuración.]()
+    [1. Estableciendo la identidad del usuario.]()
+    [1. Obteniendo ayuda.]()
 1. Creando nuevos repositorios.
 1. Flujo de trabajo local.
     1. Fase 1: *Working Directory*.
