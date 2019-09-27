@@ -48,7 +48,7 @@
 
 2. Controlar y hacer seguimiento de todos los cambios en el código fuente, pudiendo volver atrás en el tiempo y abrir diferentes ramas de desarrollo.
 
-<a href = "#indice">IR AL ÍNDICE</a>
+<a href = "#indice">[IR AL ÍNDICE]</a>
 
 <a name = "instalacion"></a>
 
@@ -64,8 +64,6 @@ Para la instalación en otros sistemas operativos se puede consultar [**aquí**]
 Luego de la instalación deberán establecerse las **variables de configuración** de *Git* para personalizar el entorno de trabajo. Es necesario hacer esta configuración **solamente una vez** en el computador, ya que estas variables se mantendrán entre actualizaciones. También se pueden cambiar estas variables en cualquier momento, volviendo a ejecutar los comandos correspondientes.
 
 *Git* trae una herramienta llamada `git config`, que nos permite establecer y obtener las variables de configuración las cuales controlan el aspecto y funcionamiento de *Git.*
-
-<a href = "#indice">IR AL ÍNDICE</a>
 
 <a name = "estableciendo"></a>
 
@@ -95,7 +93,6 @@ Opcionalmente también pueden establecerse el **editor** por defecto a usar para
 $ git config --global core.editor [nombre-editor]
 $ git config --global format.pretty oneline
 ```
-<a href = "#indice">IR AL ÍNDICE</a>
 
 <a name = "obteniendo"></a>
 
@@ -107,7 +104,7 @@ $ git help [comando]
 ```
 Sin embargo, existen dos formas adicionales para obtener ayuda de *Git* que se pueden consultar [**aquí**](https://git-scm.com/book/es/v2/Inicio---Sobre-el-Control-de-Versiones-¿Cómo-obtener-ayuda%3F)
 
-<a href = "#indice">IR AL ÍNDICE</a>
+<a href = "#indice">[IR AL ÍNDICE]</a>
 
 <a name = "creando"></a>
 
@@ -119,7 +116,7 @@ Con *Git*  se pueden crear nuevos repositorios básicamente de dos maneras:
 
 2. La otra forma de crear un nuevo repositorio es *clonándolo* desde otra ubicación con el comando `git clone [nombre-repositorio] [dirección URL/URI]`. Por defecto *Git* establece [nombre-repositorio] a *origin* si no se especifica. Por ejemplo, para clonar este repositorio localmente basta con hacer `git clone https://github.com/ejdecena/tutorial_git.git`, el cual creará un directorio local con el nombre de *tutorial_git*. Si se quiere clonar el repositorio a un directorio con otro nombre distinto al original, se puede especificar un tercer parámetro al comando `git clone [nombre-repositorio] [dirección URL/URI] [nombre-directorio]`. Por ejemplo el comando `git clone https://github.com/ejdecena/tutorial_git.git mi_repo` creará el directorio `mi_repo` con el repositorio clonado.
 
-<a href = "#indice">IR AL ÍNDICE</a>
+<a href = "#indice">[IR AL ÍNDICE]</a>
 
 <a name = "flujo"></a>
 
@@ -133,9 +130,9 @@ Los archivos en *Git* pasan por 3 fases diferentes en forma local:
 
 La siguiente figura muestra el esquema de flujo de trabajo local de *Git*:
 
+<center>
 ![](imagenes/git_flujo_trabajo.png)
-
-<a href = "#indice">IR AL ÍNDICE</a>
+</center>
 
 <a name = "working"></a>
 
@@ -147,23 +144,17 @@ Una vez que hemos hecho los cambios necesarios, pasamos nuestros archivos al *St
 
 Cuando se pasan los archivos del *Working Directory* al *Staging Area*, se cambia el estado del código de *modificado* a *preparado*. Para **deshacer** los cambios en el *Working Directory* con el último *commit* debe usarse el comando `git checkout -- [archivo]`. Los archivos que estén en el *Staging Area* no serán modificados.
 
-<a href = "#indice">IR AL ÍNDICE</a>
-
 <a name = "staging"></a>
 
 ### 4.2 Fase 2: *Staging Area* (*Index*).
 
 Para pasar nuestro código del *Staging Area* al *Git Directory* lo hacemos con el comando `git commit -m "[descripción del commit]"`. Hay distintas modalidades para el comando `git commit`que pueden leerse [**aquí**](https://git-scm.com/book/es/v2/Fundamentos-de-Git-Guardando-cambios-en-el-Repositorio). Cuando hacemos el `commit` el código pasa del estado *preparado* a *confirmado*. Para **devolver** un archivo del *Staging Área* al *Working Directory* debe ejecutarse `git reset HEAD [archivo]`.
 
-<a href = "#indice">IR AL ÍNDICE</a>
-
 <a name = "git"></a>
 
 ### 4.3 Fase 3: *Git Directory* (*HEAD*).
 
 Una vez que el código esta *confirmado* ya está listo para actualizarse con un servidor remoto de *Git* (*GitHub*, *GitLab*, *Bitbucket*, etc.) como veremos más adelante.
-
-<a href = "#indice">IR AL ÍNDICE</a>
 
 <a name = "ignorar"></a>
 
@@ -178,8 +169,6 @@ En general, el **flujo de trabajo local** básico en *Git* podríamos resumirlo 
 3. Confirmas los cambios con `git commit`, pasando los archivos al *Git Directory* y haciendo de este modo una copia instantánea y permanente en tu directorio de *Git*.
 
 En algunos casos el paso 2, pasar los archivos al *Staging Area*, puede **omitirse** del *flujo de trabajo*, de tal manera que podemos pasar los archivos **directamente** del *Working Directory* al *Git Directory* añadiendo la opción `-a` al comando `git commit`.
-
-<a href = "#indice">IR AL ÍNDICE</a>
 
 <a name = "ejemplos"></a>
 
@@ -224,7 +213,7 @@ Como podemos notar, en el *flujo de trabajo* local básico solo manejamos 4 coma
 3. `git reset HEAD` para **retroceder** y pasar los cambios del *Staging Area* al *Working Directory*
 4. `git checkout --` para **retroceder** y pasar los cambios del *Git Directory* al *Working Directory*.
 
-<a href = "#indice">IR AL ÍNDICE</a>
+<a href = "#indice">[IR AL ÍNDICE]</a>
 
 <a name = "herramientas"></a>
 
@@ -278,7 +267,7 @@ $ git tag 1.0.0 eece07985e
 ```
 Agrega la etiqueta `1.0.0` al primer *commit*, el marcado con el hash `eece07985eec4d1ccad5cd8022e6a806086dcbd2`. Nótese que en el ejemplo solo usamos los 10 primeros caracteres del hash. El comando `git tag` tiene múltiples opciones las cuales pueden leerse [**aquí**](https://git-scm.com/book/es/v2/Fundamentos-de-Git-Etiquetado). 
 
-<a href = "#indice">IR AL ÍNDICE</a>
+<a href = "#indice">[IR AL ÍNDICE]</a>
 
 <a name = "creacion"></a>
 
@@ -311,7 +300,7 @@ $ git checkout -d desarrollo
 ```
 Cuando se hace un *merge* es posible que hayan conflictos al tratar de cambiar archivos que ya tengan otros cambios, estos conflictos deberán **resolverse manualmente** antes de intentar un nuevo *merge*. Para obtener más información sobre el manejo de las ramas podemos ir [**aquí**](https://git-scm.com/book/es/v2/Ramificaciones-en-Git-¿Qué-es-una-rama%3F).
 
-<a href = "#indice">IR AL ÍNDICE</a>
+<a href = "#indice">[IR AL ÍNDICE]</a>
 
 <a name = "agregar"></a>
 
@@ -385,7 +374,7 @@ Has **dos** maneras de actualizar el repositorio local con los datos en el repos
 
 En todo repositorio local existe una **rama oculta** que puedes ver al ejecutar `git branch -a`, esa rama oculta es `origin/master`. Al usar `git fetch` bajas los cambios del repositorio remoto a la rama oculta `origin/master`, luego tendrías que hacer un *merge* para combinarla con tu rama local haciendo `git merge origin/master`.
 
-<a href = "#indice">IR AL ÍNDICE</a>
+<a href = "#indice">[IR AL ÍNDICE]</a>
 
 <a name = "participando"></a>
 
@@ -393,4 +382,4 @@ En todo repositorio local existe una **rama oculta** que puedes ver al ejecutar 
 [en progreso]
 [Guías de GitHub](https://guides.github.com/)
 
-<a href = "#indice">IR AL ÍNDICE</a>
+<a href = "#indice">[IR AL ÍNDICE]</a>
