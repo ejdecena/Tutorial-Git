@@ -11,16 +11,43 @@
 * [Ing. Luís Acevedo.](mailto:laar19@protonmail.com)
 
 
-## ¿Qué es GIT?
+## Índice.
+
+[1. ¿Qué es GIT?]()
+[2. Instalación y configuración.]()
+[    2.1 Estableciendo la identidad del usuario.]()
+[    2.2 Obteniendo ayuda.]()
+[3. Creando nuevos repositorios.]()
+[4. Flujo de trabajo local.]()
+[    4.1 Fase 1: *Working Directory*.](#4.1-fase-1:-working-directory.)
+[    4.2 Fase 2: *Staging Area* (*Index*).]()
+[    4.3 Fase 3: *Git Directory* (*HEAD*).]()
+[    4.4 Ignorar archivos.]()
+[    4.5 Ejemplos de flujo de trabajo local.]()
+[5. Herramientas adicionales.]()
+[    5.1 Observando las diferencias entre archivos.]()
+[    5.2 Observando la historia de commits.]()
+[    5.3 Añadiendo tags a los commits.]()
+[6. Creación y gestión de ramas.]()
+[7. Agregar y gestionar repositorios remotos.]()
+[    7.1 Eliminar y renombrar remotos.]()
+[    7.2 Inspeccionando un remoto.]()
+[    7.3 Actualizando el repositorio remoto.]()
+[    7.4 Actualizando el repositorio local.]()
+[8. Participando en proyectos de GitHub.]()
+
+
+## 1. ¿Qué es GIT?
 
 [GIT](https://git-scm.com/book/es/v2) es un [sistema de control de versiones](https://es.wikipedia.org/wiki/Control_de_versiones) que nos permite:
 
 1. Trabajar en equipo de forma remota, simple y óptima mientras estamos desarrollando software.
 
 2. Controlar y hacer seguimiento de todos los cambios en el código fuente, pudiendo volver atrás en el tiempo y abrir diferentes ramas de desarrollo.
+[Volver al indice](#índice)
 
 
-## Instalación y configuración.
+## 2. Instalación y configuración.
 
 Para instalar *Git* en un sistema operativo *Linux* con paquetería *apt* (*Debian*, *Ubuntu*, *Linux Mint*, etc) basta con ejecutar el siguiente comando desde la terminal:
 
@@ -33,7 +60,7 @@ Luego de la instalación deberán establecerse las **variables de configuración
 
 *Git* trae una herramienta llamada `git config`, que nos permite establecer y obtener las variables de configuración las cuales controlan el aspecto y funcionamiento de *Git.*
 
-### Estableciendo la identidad del usuario.
+### 2.1 Estableciendo la identidad del usuario.
 
 Lo primero que debe hacerse luego de instalar *Git* es **establecer la identidad del usuario**. Esto es importante porque los *commits* de *Git* usan esta información de manera automática en todos los *commits* que se hagan en el repositorio.
 
@@ -60,7 +87,7 @@ $ git config --global core.editor [nombre-editor]
 $ git config --global format.pretty oneline
 ```
 
-### Obteniendo ayuda.
+### 2.2 Obteniendo ayuda.
 
 Para obtener ayuda sobre cualquier comando de *Git* podemos usar:
 ```bash
@@ -68,7 +95,8 @@ $ git help [comando]
 ```
 Sin embargo, existen dos formas adicionales para obtener ayuda de *Git* que se pueden consultar [**aquí**](https://git-scm.com/book/es/v2/Inicio---Sobre-el-Control-de-Versiones-¿Cómo-obtener-ayuda%3F)
 
-## Crear nuevos repositorios.
+
+## 3. Creando nuevos repositorios.
 
 Con *Git*  se pueden crear nuevos repositorios básicamente de dos maneras:
 
@@ -77,7 +105,7 @@ Con *Git*  se pueden crear nuevos repositorios básicamente de dos maneras:
 2. La otra forma de crear un nuevo repositorio es *clonándolo* desde otra ubicación con el comando `git clone [nombre-repositorio] [dirección URL/URI]`. Por defecto *Git* establece [nombre-repositorio] a *origin* si no se especifica. Por ejemplo, para clonar este repositorio localmente basta con hacer `git clone https://github.com/ejdecena/tutorial_git.git`, el cual creará un directorio local con el nombre de *tutorial_git*. Si se quiere clonar el repositorio a un directorio con otro nombre distinto al original, se puede especificar un tercer parámetro al comando `git clone [nombre-repositorio] [dirección URL/URI] [nombre-directorio]`. Por ejemplo el comando `git clone https://github.com/ejdecena/tutorial_git.git mi_repo` creará el directorio `mi_repo` con el repositorio clonado.
 
 
-## Flujo de trabajo local.
+## 4. Flujo de trabajo local.
 
 Los archivos en *Git* pasan por 3 fases diferentes en forma local:
 
@@ -89,7 +117,7 @@ La siguiente figura muestra el esquema de flujo de trabajo local de *Git*:
 
 ![](imagenes/git_flujo_trabajo.png)
 
-### Fase 1: *Working Directory*.
+### 4.1 Fase 1: *Working Directory*.
 
 En esta fase podemos hacer cualquier cambio en los archivos sin afectar nuestro repositorio (*Git Directory*). En cuanto modificamos algo en nuestro código, éste tendrá status de *modificado*. Si ejecutamos el comando `git status` nos mostrará qué archivos han sido modificados (creados o eliminados).
 
@@ -97,15 +125,15 @@ Una vez que hemos hecho los cambios necesarios, pasamos nuestros archivos al *St
 
 Cuando se pasan los archivos del *Working Directory* al *Staging Area*, se cambia el estado del código de *modificado* a *preparado*. Para **deshacer** los cambios en el *Working Directory* con el último *commit* debe usarse el comando `git checkout -- [archivo]`. Los archivos que estén en el *Staging Area* no serán modificados.
 
-### Fase 2: *Staging Area* (*Index*).
+### 4.2 Fase 2: *Staging Area* (*Index*).
 
 Para pasar nuestro código del *Staging Area* al *Git Directory* lo hacemos con el comando `git commit -m "[descripción del commit]"`. Hay distintas modalidades para el comando `git commit`que pueden leerse [**aquí**](https://git-scm.com/book/es/v2/Fundamentos-de-Git-Guardando-cambios-en-el-Repositorio). Cuando hacemos el `commit` el código pasa del estado *preparado* a *confirmado*. Para **devolver** un archivo del *Staging Área* al *Working Directory* debe ejecutarse `git reset HEAD [archivo]`.
 
-### Fase 3: *Git Directory* (*HEAD*).
+### 4.3 Fase 3: *Git Directory* (*HEAD*).
 
 Una vez que el código esta *confirmado* ya está listo para actualizarse con un servidor remoto de *Git* (*GitHub*, *GitLab*, *Bitbucket*, etc.) como veremos más adelante.
 
-### Ignorar archivos.
+### 4.4 Ignorar archivos.
 
 A veces será deseable que *Git* no añada algunos archivos o directorios al *Working Directory*, o que simplemente estos archivos o directorios no aparezcan como no rastreados. Este suele ser el caso de archivos generados automáticamente o archivos de backup, etc. En estos casos, puedes crear un archivo llamado `.gitignore` que liste los archivos o patrones de nombres de archivos para evitar que estos sean tomados en cuenta por *Git*. Podemos encontrar varios ejemplos del archivo `.gitignore` [**aquí**](https://git-scm.com/book/es/v2/Fundamentos-de-Git-Guardando-cambios-en-el-Repositorio).
 
@@ -117,7 +145,7 @@ En general, el **flujo de trabajo local** básico en *Git* podríamos resumirlo 
 
 En algunos casos el paso 2, pasar los archivos al *Staging Area*, puede **omitirse** del *flujo de trabajo*, de tal manera que podemos pasar los archivos **directamente** del *Working Directory* al *Git Directory* añadiendo la opción `-a` al comando `git commit`.
 
-### Ejemplos de flujo de trabajo local.
+### 4.5 Ejemplos de flujo de trabajo local.
 
 1. Agrega el archivo del *Working Directory* al *Staging Area* y luego al *Git Directory* (ruta completa):
 ```bash
@@ -158,11 +186,11 @@ Como podemos notar, en el *flujo de trabajo* local básico solo manejamos 4 coma
 3. `git reset HEAD` para **retroceder** y pasar los cambios del *Staging Area* al *Working Directory*
 4. `git checkout --` para **retroceder** y pasar los cambios del *Git Directory* al *Working Directory*.
 
-## Herramientas adicionales.
+## 5. Herramientas adicionales.
 
 Los 4 comandos de la sección anterior son básicos para el *flujo de trabajo* local y de algún modo son suficientes, pero existen 3 comandos adicionales que **complementan** las tareas: `git diff`, `git log` y `git tag`.
 
-### Observando las diferencias entre archivos.
+### 5.1 Observando las diferencias entre archivos.
 
 Siempre es posible ver los cambios o diferencias de los archivos en las distintas fases, por ejemplo:
 * `git diff` muestra las diferencias entre los archivos entre el *Working Directory* y *Staging Area*. 
@@ -170,11 +198,11 @@ Siempre es posible ver los cambios o diferencias de los archivos en las distinta
 
 El comando `git diff` tiene múltiples opciones que pueden leerse [**aquí**](https://git-scm.com/book/es/v2/Fundamentos-de-Git-Guardando-cambios-en-el-Repositorio).
 
-### Observando la historia de commits.
+### 5.2 Observando la historia de commits.
 
 También siempre es posible ver el *historial* de cambios del repositorio *Git Directory* con el comando `git log`. Este comando tiene múltiples opciones las cuales pueden leerse [**aquí**](https://git-scm.com/book/es/v2/Fundamentos-de-Git-Ver-el-Historial-de-Confirmaciones).
 
-### Añadiendo tags a los commits.
+### 5.3 Añadiendo tags a los commits.
 
 Cuando vemos el historial de los *commits* con `git log` podemos ver algo como esto:
 ```bash
@@ -202,7 +230,7 @@ $ git tag 1.0.0 eece07985e
 ```
 Agrega la etiqueta `1.0.0` al primer *commit*, el marcado con el hash `eece07985eec4d1ccad5cd8022e6a806086dcbd2`. Nótese que en el ejemplo solo usamos los 10 primeros caracteres del hash. El comando `git tag` tiene múltiples opciones las cuales pueden leerse [**aquí**](https://git-scm.com/book/es/v2/Fundamentos-de-Git-Etiquetado). 
 
-## Creación y gestión de ramas.
+## 6. Creación y gestión de ramas.
 
 El manejo de *ramas* es muy sencillo en *Git* y básicamente se reduce a 3 comandos:
 
@@ -210,6 +238,7 @@ El manejo de *ramas* es muy sencillo en *Git* y básicamente se reduce a 3 coman
 * `git checkout [nombre-rama]` nos **cambia** a la rama `nombre-rama`.
 * `git checkout -b [nombre-rama]` **crea** la rama `nombre-rama` y nos **cambia** de una vez a la rama.
 * `git checkout -d [nombre-rama]` **elimina** la rama [nombre-rama].
+* `git merge [nombre-rama]` **combina** la rama activa con [nombre-rama].
 
 Siempre vamos a tener una rama `master` que será la rama principal. Supongamos que creamos la rama `desarrollo` para hacer pruebas:
 ```bash
@@ -230,7 +259,7 @@ $ git checkout -d desarrollo
 ```
 Cuando se hace un *merge* es posible que hayan conflictos al tratar de cambiar archivos que ya tengan otros cambios, estos conflictos deberán **resolverse manualmente** antes de intentar un nuevo *merge*. Para obtener más información sobre el manejo de las ramas podemos ir [**aquí**](https://git-scm.com/book/es/v2/Ramificaciones-en-Git-¿Qué-es-una-rama%3F).
 
-## Agregar y gestionar repositorios remotos.
+## 7. Agregar y gestionar repositorios remotos.
 
 Hasta ahora hemos trabajado en forma local con nuestro repositorio; sin embargo, es deseable que podamos compartir nuestro código con otros colaboradores en forma remota. Para ello debemos *linkear* nuestro repositorio local con uno o varios repositorios remotos de la siguiente manera:
 ```bash
@@ -242,11 +271,11 @@ $ git remote -v
 ```
 Si previamente hemos *clonado* un repositorio remoto, automáticamente este repositorio de donde clonamos **queda establecido**, y no es necesario ejecutar el `git remote add`.
 
-### Eliminar y renombrar remotos.
+### 7.1 Eliminar y renombrar remotos.
 
 Para **eliminar** un repositorio remoto *linkeado* a nuestro repositorio local podemos ejecutar `git remote rm [nombre-remoto]`. Para **cambiar el nombre** de la referencia de un remoto podemos ejecutar `git remote rename [nombre-actual] [nuevo-nombre]`.
 
-### Inspeccionando un remoto.
+### 7.2 Inspeccionando un remoto.
 
 Para ver información sobre un repositorio remoto en particular, puedes ejecutar el comando `git remote show [nombre-remoto]`. Si ejecutas el comando con un nombre en particular, como `origin` verás algo como lo siguiente:
 ```bash
@@ -262,7 +291,7 @@ Para ver información sobre un repositorio remoto en particular, puedes ejecutar
     master pushes to master (up to date)
 ```
 
-### Actualizando el repositorio remoto.
+### 7.3 Actualizando el repositorio remoto.
 
 Para actualizar el repositorio remoto a partir de nuestro repositorio local, ejecutamos el comando `git push` de la siguiente forma:
 ```bash
@@ -282,7 +311,7 @@ $ git push
 ```
 y *Git* entenderá que deberá hacer el *push* al `origin master`.
 
-### Actualizando el repositorio local.
+### 7.4 Actualizando el repositorio local.
 
 Has **dos** maneras de actualizar el repositorio local con los datos en el repositorio remoto, a través de los comandos `git pull` y `git fetch`.
 
@@ -292,6 +321,6 @@ Has **dos** maneras de actualizar el repositorio local con los datos en el repos
 
 En todo repositorio local existe una **rama oculta** que puedes ver al ejecutar `git branch -a`, esa rama oculta es `origin/master`. Al usar `git fetch` bajas los cambios del repositorio remoto a la rama oculta `origin/master`, luego tendrías que hacer un *merge* para combinarla con tu rama local haciendo `git merge origin/master`.
 
-## Participando en proyectos de GitHub.
+## 8. Participando en proyectos de GitHub.
 [en progreso]
 [Guías de GitHub](https://guides.github.com/)
