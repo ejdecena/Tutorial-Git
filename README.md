@@ -94,6 +94,7 @@ Opcionalmente también pueden establecerse el **editor** por defecto a usar para
 $ git config --global core.editor [nombre-editor]
 $ git config --global format.pretty oneline
 ```
+<a href = "#indice">IR AL ÍNDICE</a>
 
 <a name = "obteniendo"></a>
 
@@ -105,8 +106,9 @@ $ git help [comando]
 ```
 Sin embargo, existen dos formas adicionales para obtener ayuda de *Git* que se pueden consultar [**aquí**](https://git-scm.com/book/es/v2/Inicio---Sobre-el-Control-de-Versiones-¿Cómo-obtener-ayuda%3F)
 
+<a href = "#indice">IR AL ÍNDICE</a>
 
-<a name = "creando-nuevos-repositorios"></a>
+<a name = "creando"></a>
 
 ## 3. Creando nuevos repositorios.
 
@@ -116,8 +118,9 @@ Con *Git*  se pueden crear nuevos repositorios básicamente de dos maneras:
 
 2. La otra forma de crear un nuevo repositorio es *clonándolo* desde otra ubicación con el comando `git clone [nombre-repositorio] [dirección URL/URI]`. Por defecto *Git* establece [nombre-repositorio] a *origin* si no se especifica. Por ejemplo, para clonar este repositorio localmente basta con hacer `git clone https://github.com/ejdecena/tutorial_git.git`, el cual creará un directorio local con el nombre de *tutorial_git*. Si se quiere clonar el repositorio a un directorio con otro nombre distinto al original, se puede especificar un tercer parámetro al comando `git clone [nombre-repositorio] [dirección URL/URI] [nombre-directorio]`. Por ejemplo el comando `git clone https://github.com/ejdecena/tutorial_git.git mi_repo` creará el directorio `mi_repo` con el repositorio clonado.
 
+<a href = "#indice">IR AL ÍNDICE</a>
 
-<a name = "flujo-de-trabajo-local"></a>
+<a name = "flujo"></a>
 
 ## 4. Flujo de trabajo local.
 
@@ -131,7 +134,9 @@ La siguiente figura muestra el esquema de flujo de trabajo local de *Git*:
 
 ![](imagenes/git_flujo_trabajo.png)
 
-<a name = "fase-1-working-directory"></a>
+<a href = "#indice">IR AL ÍNDICE</a>
+
+<a name = "working-directory"></a>
 
 ### 4.1 Fase 1: *Working Directory*.
 
@@ -141,19 +146,25 @@ Una vez que hemos hecho los cambios necesarios, pasamos nuestros archivos al *St
 
 Cuando se pasan los archivos del *Working Directory* al *Staging Area*, se cambia el estado del código de *modificado* a *preparado*. Para **deshacer** los cambios en el *Working Directory* con el último *commit* debe usarse el comando `git checkout -- [archivo]`. Los archivos que estén en el *Staging Area* no serán modificados.
 
-<a name = "fase-2-staging-area"></a>
+<a href = "#indice">IR AL ÍNDICE</a>
+
+<a name = "staging-area"></a>
 
 ### 4.2 Fase 2: *Staging Area* (*Index*).
 
 Para pasar nuestro código del *Staging Area* al *Git Directory* lo hacemos con el comando `git commit -m "[descripción del commit]"`. Hay distintas modalidades para el comando `git commit`que pueden leerse [**aquí**](https://git-scm.com/book/es/v2/Fundamentos-de-Git-Guardando-cambios-en-el-Repositorio). Cuando hacemos el `commit` el código pasa del estado *preparado* a *confirmado*. Para **devolver** un archivo del *Staging Área* al *Working Directory* debe ejecutarse `git reset HEAD [archivo]`.
 
-<a name = "fase-3-git-directory"></a>
+<a href = "#indice">IR AL ÍNDICE</a>
+
+<a name = "git"></a>
 
 ### 4.3 Fase 3: *Git Directory* (*HEAD*).
 
 Una vez que el código esta *confirmado* ya está listo para actualizarse con un servidor remoto de *Git* (*GitHub*, *GitLab*, *Bitbucket*, etc.) como veremos más adelante.
 
-<a name = "ignorar-archivos"></a>
+<a href = "#indice">IR AL ÍNDICE</a>
+
+<a name = "ignorar"></a>
 
 ### 4.4 Ignorar archivos.
 
@@ -167,7 +178,9 @@ En general, el **flujo de trabajo local** básico en *Git* podríamos resumirlo 
 
 En algunos casos el paso 2, pasar los archivos al *Staging Area*, puede **omitirse** del *flujo de trabajo*, de tal manera que podemos pasar los archivos **directamente** del *Working Directory* al *Git Directory* añadiendo la opción `-a` al comando `git commit`.
 
-<a name = "ejemplos-de-flujos-de-trabajo-local"></a>
+<a href = "#indice">IR AL ÍNDICE</a>
+
+<a name = "ejemplos"></a>
 
 ### 4.5 Ejemplos de flujo de trabajo local.
 
@@ -210,13 +223,17 @@ Como podemos notar, en el *flujo de trabajo* local básico solo manejamos 4 coma
 3. `git reset HEAD` para **retroceder** y pasar los cambios del *Staging Area* al *Working Directory*
 4. `git checkout --` para **retroceder** y pasar los cambios del *Git Directory* al *Working Directory*.
 
-<a name = "herramientas-adicionales"></a>
+<a href = "#indice">IR AL ÍNDICE</a>
+
+<a name = "herramientas"></a>
 
 ## 5. Herramientas adicionales.
 
 Los 4 comandos de la sección anterior son básicos para el *flujo de trabajo* local y de algún modo son suficientes, pero existen 3 comandos adicionales que **complementan** las tareas: `git diff`, `git log` y `git tag`.
 
-<a name = "observando-las-diferencias-entre-archivos"></a>
+<a href = "#indice">IR AL ÍNDICE</a>
+
+<a name = "diferencias"></a>
 
 ### 5.1 Observando las diferencias entre archivos.
 
@@ -226,13 +243,17 @@ Siempre es posible ver los cambios o diferencias de los archivos en las distinta
 
 El comando `git diff` tiene múltiples opciones que pueden leerse [**aquí**](https://git-scm.com/book/es/v2/Fundamentos-de-Git-Guardando-cambios-en-el-Repositorio).
 
-<a name = "observando-la-historia-de-commits"></a>
+<a href = "#indice">IR AL ÍNDICE</a>
+
+<a name = "historia"></a>
 
 ### 5.2 Observando la historia de commits.
 
 También siempre es posible ver el *historial* de cambios del repositorio *Git Directory* con el comando `git log`. Este comando tiene múltiples opciones las cuales pueden leerse [**aquí**](https://git-scm.com/book/es/v2/Fundamentos-de-Git-Ver-el-Historial-de-Confirmaciones).
 
-<a name = "anadiendo-tags-a-los-commits"></a>
+<a href = "#indice">IR AL ÍNDICE</a>
+
+<a name = "tags"></a>
 
 ### 5.3 Añadiendo tags a los commits.
 
@@ -262,7 +283,9 @@ $ git tag 1.0.0 eece07985e
 ```
 Agrega la etiqueta `1.0.0` al primer *commit*, el marcado con el hash `eece07985eec4d1ccad5cd8022e6a806086dcbd2`. Nótese que en el ejemplo solo usamos los 10 primeros caracteres del hash. El comando `git tag` tiene múltiples opciones las cuales pueden leerse [**aquí**](https://git-scm.com/book/es/v2/Fundamentos-de-Git-Etiquetado). 
 
-<a name = "creacion-y-gestion-de-ramas"></a>
+<a href = "#indice">IR AL ÍNDICE</a>
+
+<a name = "creacion"></a>
 
 ## 6. Creación y gestión de ramas.
 
@@ -293,7 +316,9 @@ $ git checkout -d desarrollo
 ```
 Cuando se hace un *merge* es posible que hayan conflictos al tratar de cambiar archivos que ya tengan otros cambios, estos conflictos deberán **resolverse manualmente** antes de intentar un nuevo *merge*. Para obtener más información sobre el manejo de las ramas podemos ir [**aquí**](https://git-scm.com/book/es/v2/Ramificaciones-en-Git-¿Qué-es-una-rama%3F).
 
-<a name = "agregar-y-gestionar-repositorios-remotos"></a>
+<a href = "#indice">IR AL ÍNDICE</a>
+
+<a name = "agregar"></a>
 
 ## 7. Agregar y gestionar repositorios remotos.
 
@@ -307,13 +332,17 @@ $ git remote -v
 ```
 Si previamente hemos *clonado* un repositorio remoto, automáticamente este repositorio de donde clonamos **queda establecido**, y no es necesario ejecutar el `git remote add`.
 
-<a name = "eliminar-y-renombrar-remotos"></a>
+<a href = "#indice">IR AL ÍNDICE</a>
+
+<a name = "eliminar"></a>
 
 ### 7.1 Eliminar y renombrar remotos.
 
 Para **eliminar** un repositorio remoto *linkeado* a nuestro repositorio local podemos ejecutar `git remote rm [nombre-remoto]`. Para **cambiar el nombre** de la referencia de un remoto podemos ejecutar `git remote rename [nombre-actual] [nuevo-nombre]`.
 
-<a name = "inspeccioando-un-remoto"></a>
+<a href = "#indice">IR AL ÍNDICE</a>
+
+<a name = "inspeccionando"></a>
 
 ### 7.2 Inspeccionando un remoto.
 
@@ -331,7 +360,9 @@ Para ver información sobre un repositorio remoto en particular, puedes ejecutar
     master pushes to master (up to date)
 ```
 
-<a name = "actualizando-el-repositorio-remoto"></a>
+<a href = "#indice">IR AL ÍNDICE</a>
+
+<a name = "repo-remoto"></a>
 
 ### 7.3 Actualizando el repositorio remoto.
 
@@ -353,7 +384,9 @@ $ git push
 ```
 y *Git* entenderá que deberá hacer el *push* al `origin master`.
 
-<a name = "actualizando-el-repositorio-local"></a>
+<a href = "#indice">IR AL ÍNDICE</a>
+
+<a name = "repo-local"></a>
 
 ### 7.4 Actualizando el repositorio local.
 
@@ -365,7 +398,9 @@ Has **dos** maneras de actualizar el repositorio local con los datos en el repos
 
 En todo repositorio local existe una **rama oculta** que puedes ver al ejecutar `git branch -a`, esa rama oculta es `origin/master`. Al usar `git fetch` bajas los cambios del repositorio remoto a la rama oculta `origin/master`, luego tendrías que hacer un *merge* para combinarla con tu rama local haciendo `git merge origin/master`.
 
-<a name = "participando-en-proyectos-github"></a>
+<a href = "#indice">IR AL ÍNDICE</a>
+
+<a name = "participando"></a>
 
 ## 8. Participando en proyectos de GitHub.
 [en progreso]
