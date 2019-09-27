@@ -1,3 +1,0 @@
-# Código de Conducta.
-
-OK.
