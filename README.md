@@ -1,12 +1,3 @@
-<script type="text/javascript"
-  async
-  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
-
-$$J(\theta) =\frac{1}{2m}
-[\sum^m_{i=1}(h_\theta(x^{(i)}) - 
-y^{(i)})2 + \lambda\sum^n_{j=1}\theta^2_j$$
-
 # Tutorial GIT.
 
 *Tutorial GIT* es una guía básica para comprender y usar las principales funcionalidades del sistema de control de versiones *Git*.
@@ -19,36 +10,35 @@ y^{(i)})2 + \lambda\sum^n_{j=1}\theta^2_j$$
 * [Ing. Edgard Decena.](mailto:edecena@gmail.com)
 * [Ing. Luís Acevedo.](mailto:laar19@protonmail.com)
 
+<a name = "indice"></a>
 
 ## Índice.
 <pre>
-1. ¿Qué es GIT? [IR](#que-es-git)
-1. Instalación y configuración. [IR](#instalacion-y-configuracion)
-<a href = "#creando-nuevos-repositorios">2. Instalación y configuración.</a>
-<a href = "#creando-nuevos-repositorios">   2.1 Estableciendo la identidad del usuario.</a>
-    1. Estableciendo la identidad del usuario.
-    1. Obteniendo ayuda.
-1. Creando nuevos repositorios. [IR](#creando-nuevos-repositorios)
-1. Flujo de trabajo local.
-    1. Fase 1: *Working Directory*.
-    1. Fase 2: *Staging Area* (*Index*).
-    1. Fase 3: *Git Directory* (*HEAD*).
-    1. Ignorar archivos.
-    1. Ejemplos de flujo de trabajo local.
-1. Herramientas adicionales.
-    1. Observando las diferencias entre archivos.
-    1. Observando la historia de commits.
-    1. Añadiendo tags a los commits.
-1. Creación y gestión de ramas.
-1. Agregar y gestionar repositorios remotos.
-    1. Eliminar y renombrar remotos.
-    1. Inspeccionando un remoto.
-    1. Actualizando el repositorio remoto.
-    1. Actualizando el repositorio local.
-1. Participando en proyectos de GitHub.
+1. <a href = "#que">¿Qué es GIT?</a>
+2. <a href = "#instalacion">Instalación y configuración.</a>
+    2.1 <a href = "#estableciendo">Estableciendo la identidad del usuario.</a>
+    2.2. <a href = "#obteniendo">Obteniendo ayuda.</a>
+3. <a href = "#creando">Creando nuevos repositorios.</a>
+4. <a href = "#flujo">Flujo de trabajo local.</a>
+    4.1 <a href = "#working">Fase 1: *Working Directory*.</a>
+    4.2 <a href = "#staging">Fase 2: *Staging Area* (*Index*).</a>
+    4.3 <a href = "#git">Fase 3: *Git Directory* (*HEAD*).</a>
+    4.4 <a href = "#ignorar">Ignorar archivos.</a>
+    4.5 <a href = "#ejemplos">Ejemplos de flujo de trabajo local.</a>
+5. <a href = "#herramientas">Herramientas adicionales.</a>
+    5.1 <a href = "#diferencias">Observando las diferencias entre archivos.</a>
+    5.2 <a href = "#historias">Observando la historia de commits.</a>
+    5.3 <a href = "#tags">Añadiendo tags a los commits.</a>
+6. <a href = "#creacion">Creación y gestión de ramas.</a>
+7. <a href = "#agregar">Agregar y gestionar repositorios remotos.</a>
+    7.1 <a href = "#eliminar">Eliminar y renombrar remotos.</a>
+    7.2 <a href = "#inspeccionando">Inspeccionando un remoto.</a>
+    7.3 <a href = "#repo-remoto">Actualizando el repositorio remoto.</a>
+    7.4 <a href = "#repo-local">Actualizando el repositorio local.</a>
+8. <a href = "#participando">Participando en proyectos de GitHub.</a>
 </pre>
 
-<a name = "que-es-git"></a>
+<a name = "que"></a>
 
 ## 1. ¿Qué es GIT?
 
@@ -57,9 +47,9 @@ y^{(i)})2 + \lambda\sum^n_{j=1}\theta^2_j$$
 1. Trabajar en equipo de forma remota, simple y óptima mientras estamos desarrollando software.
 
 2. Controlar y hacer seguimiento de todos los cambios en el código fuente, pudiendo volver atrás en el tiempo y abrir diferentes ramas de desarrollo.
+<a href = "#indice">Índice</a>
 
-
-<a name = "instalacion-y-configuracion"></a>
+<a name = "instalacion"></a>
 
 ## 2. Instalación y configuración.
 
@@ -74,7 +64,7 @@ Luego de la instalación deberán establecerse las **variables de configuración
 
 *Git* trae una herramienta llamada `git config`, que nos permite establecer y obtener las variables de configuración las cuales controlan el aspecto y funcionamiento de *Git.*
 
-<a name = "estableciendo-la-identidad-del-usuario"></a>
+<a name = "estableciendo"></a>
 
 ### 2.1 Estableciendo la identidad del usuario.
 
@@ -103,7 +93,7 @@ $ git config --global core.editor [nombre-editor]
 $ git config --global format.pretty oneline
 ```
 
-<a name = "obteniendo-ayuda"></a>
+<a name = "obteniendo"></a>
 
 ### 2.2 Obteniendo ayuda.
 
