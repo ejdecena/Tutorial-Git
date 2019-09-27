@@ -27,7 +27,7 @@
     4.5 <a href = "#ejemplos">Ejemplos de flujo de trabajo local.</a>
 5. <a href = "#herramientas">Herramientas adicionales.</a>
     5.1 <a href = "#diferencias">Observando las diferencias entre archivos.</a>
-    5.2 <a href = "#historias">Observando la historia de commits.</a>
+    5.2 <a href = "#historia">Observando la historia de commits.</a>
     5.3 <a href = "#tags">Añadiendo tags a los commits.</a>
 6. <a href = "#creacion">Creación y gestión de ramas.</a>
 7. <a href = "#agregar">Agregar y gestionar repositorios remotos.</a>
@@ -378,6 +378,7 @@ En todo repositorio local existe una **rama oculta** que puedes ver al ejecutar 
 
 ## 8. Participando en proyectos de GitHub.
 [en progreso]
+
 [Guías de GitHub](https://guides.github.com/)
 
 <a href = "#indice">[IR AL ÍNDICE]</a>
