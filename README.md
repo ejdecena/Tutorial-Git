@@ -64,6 +64,7 @@ Para la instalación en otros sistemas operativos se puede consultar [**aquí**]
 Luego de la instalación deberán establecerse las **variables de configuración** de *Git* para personalizar el entorno de trabajo. Es necesario hacer esta configuración **solamente una vez** en el computador, ya que estas variables se mantendrán entre actualizaciones. También se pueden cambiar estas variables en cualquier momento, volviendo a ejecutar los comandos correspondientes.
 
 *Git* trae una herramienta llamada `git config`, que nos permite establecer y obtener las variables de configuración las cuales controlan el aspecto y funcionamiento de *Git.*
+<a href = "#indice">IR AL ÍNDICE</a>
 
 <a name = "estableciendo"></a>
 
