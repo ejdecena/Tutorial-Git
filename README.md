@@ -13,11 +13,11 @@
 
 ## Índice.
 
-1. ¿Qué es GIT? [IR](#1. ¿Qué es GIT?)
+1. ¿Qué es GIT? [IR](#que-es-git)
 1. Instalación y configuración. [IR](#2.-instalación-y-configuración.)
     1. Estableciendo la identidad del usuario.
     1. Obteniendo ayuda.
-1. Creando nuevos repositorios.
+1. Creando nuevos repositorios. [IR](#creando-nuevos-repositorios)
 1. Flujo de trabajo local.
     1. Fase 1: *Working Directory*.
     1. Fase 2: *Staging Area* (*Index*).
@@ -38,6 +38,7 @@
 
 
 ## 1. ¿Qué es GIT?
+<a name = "que-es-git"></a>
 
 [GIT](https://git-scm.com/book/es/v2) es un [sistema de control de versiones](https://es.wikipedia.org/wiki/Control_de_versiones) que nos permite:
 
@@ -47,6 +48,7 @@
 
 
 ## 2. Instalación y configuración.
+<a name = "instalacion-y-configuracion"></a>
 
 Para instalar *Git* en un sistema operativo *Linux* con paquetería *apt* (*Debian*, *Ubuntu*, *Linux Mint*, etc) basta con ejecutar el siguiente comando desde la terminal:
 
@@ -60,6 +62,7 @@ Luego de la instalación deberán establecerse las **variables de configuración
 *Git* trae una herramienta llamada `git config`, que nos permite establecer y obtener las variables de configuración las cuales controlan el aspecto y funcionamiento de *Git.*
 
 ### 2.1 Estableciendo la identidad del usuario.
+<a name = "estableciendo-la-identidad-del-usuario"></a>
 
 Lo primero que debe hacerse luego de instalar *Git* es **establecer la identidad del usuario**. Esto es importante porque los *commits* de *Git* usan esta información de manera automática en todos los *commits* que se hagan en el repositorio.
 
@@ -87,6 +90,7 @@ $ git config --global format.pretty oneline
 ```
 
 ### 2.2 Obteniendo ayuda.
+<a name = "obteniendo-ayuda"></a>
 
 Para obtener ayuda sobre cualquier comando de *Git* podemos usar:
 ```bash
@@ -96,6 +100,7 @@ Sin embargo, existen dos formas adicionales para obtener ayuda de *Git* que se p
 
 
 ## 3. Creando nuevos repositorios.
+<a name = "creando-nuevos-repositorios"></a>
 
 Con *Git*  se pueden crear nuevos repositorios básicamente de dos maneras:
 
