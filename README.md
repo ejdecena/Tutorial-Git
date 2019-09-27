@@ -18,6 +18,7 @@
     1. Estableciendo la identidad del usuario.
     1. Obteniendo ayuda.
 1. Creando nuevos repositorios. [IR](#creando-nuevos-repositorios)
+<a href = "#creando-nuevos-repositorios">1. Creando nuevos repositorios.</a>
 1. Flujo de trabajo local.
     1. Fase 1: *Working Directory*.
     1. Fase 2: *Staging Area* (*Index*).
@@ -37,8 +38,8 @@
 1. Participando en proyectos de GitHub.
 
 
-## 1. ¿Qué es GIT?
 <a name = "que-es-git"></a>
+## 1. ¿Qué es GIT?
 
 [GIT](https://git-scm.com/book/es/v2) es un [sistema de control de versiones](https://es.wikipedia.org/wiki/Control_de_versiones) que nos permite:
 
@@ -47,8 +48,8 @@
 2. Controlar y hacer seguimiento de todos los cambios en el código fuente, pudiendo volver atrás en el tiempo y abrir diferentes ramas de desarrollo.
 
 
-## 2. Instalación y configuración.
 <a name = "instalacion-y-configuracion"></a>
+## 2. Instalación y configuración.
 
 Para instalar *Git* en un sistema operativo *Linux* con paquetería *apt* (*Debian*, *Ubuntu*, *Linux Mint*, etc) basta con ejecutar el siguiente comando desde la terminal:
 
@@ -61,8 +62,8 @@ Luego de la instalación deberán establecerse las **variables de configuración
 
 *Git* trae una herramienta llamada `git config`, que nos permite establecer y obtener las variables de configuración las cuales controlan el aspecto y funcionamiento de *Git.*
 
-### 2.1 Estableciendo la identidad del usuario.
 <a name = "estableciendo-la-identidad-del-usuario"></a>
+### 2.1 Estableciendo la identidad del usuario.
 
 Lo primero que debe hacerse luego de instalar *Git* es **establecer la identidad del usuario**. Esto es importante porque los *commits* de *Git* usan esta información de manera automática en todos los *commits* que se hagan en el repositorio.
 
@@ -89,8 +90,8 @@ $ git config --global core.editor [nombre-editor]
 $ git config --global format.pretty oneline
 ```
 
-### 2.2 Obteniendo ayuda.
 <a name = "obteniendo-ayuda"></a>
+### 2.2 Obteniendo ayuda.
 
 Para obtener ayuda sobre cualquier comando de *Git* podemos usar:
 ```bash
@@ -99,8 +100,8 @@ $ git help [comando]
 Sin embargo, existen dos formas adicionales para obtener ayuda de *Git* que se pueden consultar [**aquí**](https://git-scm.com/book/es/v2/Inicio---Sobre-el-Control-de-Versiones-¿Cómo-obtener-ayuda%3F)
 
 
-## 3. Creando nuevos repositorios.
 <a name = "creando-nuevos-repositorios"></a>
+## 3. Creando nuevos repositorios.
 
 Con *Git*  se pueden crear nuevos repositorios básicamente de dos maneras:
 
