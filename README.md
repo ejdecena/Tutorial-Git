@@ -130,8 +130,8 @@ Los archivos en *Git* pasan por 3 fases diferentes en forma local:
 
 La siguiente figura muestra el esquema de flujo de trabajo local de *Git*:
 
-->![](imagenes/git_flujo_trabajo.png)<-
-
+![](imagenes/git_flujo_trabajo.png){style="text-align:center"}
+-> Prueba
 <a name = "working"></a>
 
 ### 4.1 Fase 1: *Working Directory*.
