@@ -20,9 +20,9 @@
     2.2. <a href = "#obteniendo">Obteniendo ayuda.</a>
 3. <a href = "#creando">Creando nuevos repositorios.</a>
 4. <a href = "#flujo">Flujo de trabajo local.</a>
-    4.1 <a href = "#working">Fase 1: *Working Directory*.</a>
-    4.2 <a href = "#staging">Fase 2: *Staging Area* (*Index*).</a>
-    4.3 <a href = "#git">Fase 3: *Git Directory* (*HEAD*).</a>
+    4.1 <a href = "#working">Fase 1: Working Directory.</a>
+    4.2 <a href = "#staging">Fase 2: Staging Area (Index).</a>
+    4.3 <a href = "#git">Fase 3: Git Directory (HEAD).</a>
     4.4 <a href = "#ignorar">Ignorar archivos.</a>
     4.5 <a href = "#ejemplos">Ejemplos de flujo de trabajo local.</a>
 5. <a href = "#herramientas">Herramientas adicionales.</a>
@@ -47,7 +47,8 @@
 1. Trabajar en equipo de forma remota, simple y óptima mientras estamos desarrollando software.
 
 2. Controlar y hacer seguimiento de todos los cambios en el código fuente, pudiendo volver atrás en el tiempo y abrir diferentes ramas de desarrollo.
-<a href = "#indice">Índice</a>
+
+<a href = "#indice">IR AL ÍNDICE</a>
 
 <a name = "instalacion"></a>
 
