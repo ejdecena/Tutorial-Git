@@ -14,9 +14,7 @@
 ## Índice.
 
 [1. ¿Qué es GIT?]()
-
 [2. Instalación y configuración.]()
-
 [2.1 Estableciendo la identidad del usuario.]()
 
 [2.2 Obteniendo ayuda.]()
