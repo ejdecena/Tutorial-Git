@@ -162,9 +162,9 @@ A veces será deseable que *Git* no añada algunos archivos o directorios al *Wo
 
 En general, el **flujo de trabajo local** básico en *Git* podríamos resumirlo de la siguiente manera:
 
-1. Modificas una serie de archivos en el *Working Directory*.
-2. Preparas los archivos añadiéndolos al *Staging Area* con `git add`.
-3. Confirmas los cambios con `git commit`, pasando así los archivos al *Git Directory* creando una copia instantánea y permanente en tu directorio de *Git*.
+1. Modificamos una serie de archivos en el *Working Directory*.
+2. Preparamos los archivos añadiéndolos al *Staging Area* con `git add`.
+3. Confirmamos los cambios con `git commit`, pasando así los archivos al *Git Directory*, creando una copia instantánea y permanente en nuestro directorio de *Git*.
 
 En algunos casos la Fase 2, pasar los archivos al *Staging Area*, puede **omitirse** del *flujo de trabajo*, de tal manera que podemos pasar los archivos **directamente** del *Working Directory* al *Git Directory* añadiendo la opción `-a` al comando `git commit`.
 
