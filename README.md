@@ -17,24 +17,24 @@
 1. Instalación y configuración.
     1. Estableciendo la identidad del usuario.
     1. Obteniendo ayuda.
-3. Creando nuevos repositorios.
-4. Flujo de trabajo local.
-    4.1 Fase 1: *Working Directory*.
-    4.2 Fase 2: *Staging Area* (*Index*).
-    4.3 Fase 3: *Git Directory* (*HEAD*).
-    4.4 Ignorar archivos.
-    4.5 Ejemplos de flujo de trabajo local.
-5. Herramientas adicionales.
-    5.1 Observando las diferencias entre archivos.
-    5.2 Observando la historia de commits.
-    5.3 Añadiendo tags a los commits.
-6. Creación y gestión de ramas.
-7. Agregar y gestionar repositorios remotos.
-    7.1 Eliminar y renombrar remotos.
-    7.2 Inspeccionando un remoto.
-    7.3 Actualizando el repositorio remoto.
-    7.4 Actualizando el repositorio local.
-8. Participando en proyectos de GitHub.
+1. Creando nuevos repositorios.
+1. Flujo de trabajo local.
+    1. Fase 1: *Working Directory*.
+    1. Fase 2: *Staging Area* (*Index*).
+    1. Fase 3: *Git Directory* (*HEAD*).
+    1. Ignorar archivos.
+    1. Ejemplos de flujo de trabajo local.
+1. Herramientas adicionales.
+    1. Observando las diferencias entre archivos.
+    1. Observando la historia de commits.
+    1. Añadiendo tags a los commits.
+1. Creación y gestión de ramas.
+1. Agregar y gestionar repositorios remotos.
+    1. Eliminar y renombrar remotos.
+    1. Inspeccionando un remoto.
+    1. Actualizando el repositorio remoto.
+    1. Actualizando el repositorio local.
+1. Participando en proyectos de GitHub.
 
 
 ## 1. ¿Qué es GIT?
