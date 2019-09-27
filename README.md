@@ -1,3 +1,12 @@
+<script type="text/javascript"
+  async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+$$J(\theta) =\frac{1}{2m}
+[\sum^m_{i=1}(h_\theta(x^{(i)}) - 
+y^{(i)})2 + \lambda\sum^n_{j=1}\theta^2_j$$
+
 # Tutorial GIT.
 
 *Tutorial GIT* es una guía básica para comprender y usar las principales funcionalidades del sistema de control de versiones *Git*.
