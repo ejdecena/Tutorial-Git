@@ -14,26 +14,47 @@
 ## Índice.
 
 [1. ¿Qué es GIT?]()
+
 [2. Instalación y configuración.]()
-[    2.1 Estableciendo la identidad del usuario.]()
-[    2.2 Obteniendo ayuda.]()
+
+[2.1 Estableciendo la identidad del usuario.]()
+
+[2.2 Obteniendo ayuda.]()
+
 [3. Creando nuevos repositorios.]()
+
 [4. Flujo de trabajo local.]()
-[    4.1 Fase 1: *Working Directory*.](#4.1-fase-1:-working-directory.)
-[    4.2 Fase 2: *Staging Area* (*Index*).]()
-[    4.3 Fase 3: *Git Directory* (*HEAD*).]()
-[    4.4 Ignorar archivos.]()
-[    4.5 Ejemplos de flujo de trabajo local.]()
+
+[4.1 Fase 1: *Working Directory*.](#4.1-fase-1:-working-directory.)
+
+[4.2 Fase 2: *Staging Area* (*Index*).]()
+
+[4.3 Fase 3: *Git Directory* (*HEAD*).]()
+
+[4.4 Ignorar archivos.]()
+
+[4.5 Ejemplos de flujo de trabajo local.]()
+
 [5. Herramientas adicionales.]()
-[    5.1 Observando las diferencias entre archivos.]()
-[    5.2 Observando la historia de commits.]()
-[    5.3 Añadiendo tags a los commits.]()
+
+[5.1 Observando las diferencias entre archivos.]()
+
+[5.2 Observando la historia de commits.]()
+
+[5.3 Añadiendo tags a los commits.]()
+
 [6. Creación y gestión de ramas.]()
+
 [7. Agregar y gestionar repositorios remotos.]()
-[    7.1 Eliminar y renombrar remotos.]()
-[    7.2 Inspeccionando un remoto.]()
-[    7.3 Actualizando el repositorio remoto.]()
-[    7.4 Actualizando el repositorio local.]()
+
+[7.1 Eliminar y renombrar remotos.]()
+
+[7.2 Inspeccionando un remoto.]()
+
+[7.3 Actualizando el repositorio remoto.]()
+
+[7.4 Actualizando el repositorio local.]()
+
 [8. Participando en proyectos de GitHub.]()
 
 
