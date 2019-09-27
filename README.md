@@ -17,7 +17,7 @@
 1. <a href = "#que">¿Qué es GIT?</a>
 2. <a href = "#instalacion">Instalación y configuración.</a>
     2.1 <a href = "#estableciendo">Estableciendo la identidad del usuario.</a>
-    2.2. <a href = "#obteniendo">Obteniendo ayuda.</a>
+    2.2 <a href = "#obteniendo">Obteniendo ayuda.</a>
 3. <a href = "#creando">Creando nuevos repositorios.</a>
 4. <a href = "#flujo">Flujo de trabajo local.</a>
     4.1 <a href = "#working">Fase 1: Working Directory.</a>
@@ -64,6 +64,7 @@ Para la instalación en otros sistemas operativos se puede consultar [**aquí**]
 Luego de la instalación deberán establecerse las **variables de configuración** de *Git* para personalizar el entorno de trabajo. Es necesario hacer esta configuración **solamente una vez** en el computador, ya que estas variables se mantendrán entre actualizaciones. También se pueden cambiar estas variables en cualquier momento, volviendo a ejecutar los comandos correspondientes.
 
 *Git* trae una herramienta llamada `git config`, que nos permite establecer y obtener las variables de configuración las cuales controlan el aspecto y funcionamiento de *Git.*
+
 <a href = "#indice">IR AL ÍNDICE</a>
 
 <a name = "estableciendo"></a>
@@ -136,7 +137,7 @@ La siguiente figura muestra el esquema de flujo de trabajo local de *Git*:
 
 <a href = "#indice">IR AL ÍNDICE</a>
 
-<a name = "working-directory"></a>
+<a name = "working"></a>
 
 ### 4.1 Fase 1: *Working Directory*.
 
@@ -148,7 +149,7 @@ Cuando se pasan los archivos del *Working Directory* al *Staging Area*, se cambi
 
 <a href = "#indice">IR AL ÍNDICE</a>
 
-<a name = "staging-area"></a>
+<a name = "staging"></a>
 
 ### 4.2 Fase 2: *Staging Area* (*Index*).
 
@@ -231,8 +232,6 @@ Como podemos notar, en el *flujo de trabajo* local básico solo manejamos 4 coma
 
 Los 4 comandos de la sección anterior son básicos para el *flujo de trabajo* local y de algún modo son suficientes, pero existen 3 comandos adicionales que **complementan** las tareas: `git diff`, `git log` y `git tag`.
 
-<a href = "#indice">IR AL ÍNDICE</a>
-
 <a name = "diferencias"></a>
 
 ### 5.1 Observando las diferencias entre archivos.
@@ -243,15 +242,11 @@ Siempre es posible ver los cambios o diferencias de los archivos en las distinta
 
 El comando `git diff` tiene múltiples opciones que pueden leerse [**aquí**](https://git-scm.com/book/es/v2/Fundamentos-de-Git-Guardando-cambios-en-el-Repositorio).
 
-<a href = "#indice">IR AL ÍNDICE</a>
-
 <a name = "historia"></a>
 
 ### 5.2 Observando la historia de commits.
 
 También siempre es posible ver el *historial* de cambios del repositorio *Git Directory* con el comando `git log`. Este comando tiene múltiples opciones las cuales pueden leerse [**aquí**](https://git-scm.com/book/es/v2/Fundamentos-de-Git-Ver-el-Historial-de-Confirmaciones).
-
-<a href = "#indice">IR AL ÍNDICE</a>
 
 <a name = "tags"></a>
 
@@ -332,15 +327,11 @@ $ git remote -v
 ```
 Si previamente hemos *clonado* un repositorio remoto, automáticamente este repositorio de donde clonamos **queda establecido**, y no es necesario ejecutar el `git remote add`.
 
-<a href = "#indice">IR AL ÍNDICE</a>
-
 <a name = "eliminar"></a>
 
 ### 7.1 Eliminar y renombrar remotos.
 
 Para **eliminar** un repositorio remoto *linkeado* a nuestro repositorio local podemos ejecutar `git remote rm [nombre-remoto]`. Para **cambiar el nombre** de la referencia de un remoto podemos ejecutar `git remote rename [nombre-actual] [nuevo-nombre]`.
-
-<a href = "#indice">IR AL ÍNDICE</a>
 
 <a name = "inspeccionando"></a>
 
@@ -359,8 +350,6 @@ Para ver información sobre un repositorio remoto en particular, puedes ejecutar
   Local ref configured for 'git push':
     master pushes to master (up to date)
 ```
-
-<a href = "#indice">IR AL ÍNDICE</a>
 
 <a name = "repo-remoto"></a>
 
@@ -384,8 +373,6 @@ $ git push
 ```
 y *Git* entenderá que deberá hacer el *push* al `origin master`.
 
-<a href = "#indice">IR AL ÍNDICE</a>
-
 <a name = "repo-local"></a>
 
 ### 7.4 Actualizando el repositorio local.
@@ -404,5 +391,6 @@ En todo repositorio local existe una **rama oculta** que puedes ver al ejecutar 
 
 ## 8. Participando en proyectos de GitHub.
 [en progreso]
-
 [Guías de GitHub](https://guides.github.com/)
+
+<a href = "#indice">IR AL ÍNDICE</a>
