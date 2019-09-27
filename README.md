@@ -16,7 +16,7 @@
 1. ¿Qué es GIT? [IR](#que-es-git)
 1. Instalación y configuración. [IR](#instalacion-y-configuracion)
 <a href = "#creando-nuevos-repositorios">2. Instalación y configuración.</a>
-<a href = "#creando-nuevos-repositorios">2.1 Estableciendo la identidad del usuario.</a>
+<a href = "#creando-nuevos-repositorios">   2.1 Estableciendo la identidad del usuario.</a>
     1. Estableciendo la identidad del usuario.
     1. Obteniendo ayuda.
 1. Creando nuevos repositorios. [IR](#creando-nuevos-repositorios)
