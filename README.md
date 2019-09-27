@@ -13,7 +13,7 @@
 <a name = "indice"></a>
 
 ## Índice.
-<pre style = "font-size: 12px">
+<pre style = "font-size: 14px">
 1. <a href = "#que">¿Qué es GIT?</a>
 2. <a href = "#instalacion">Instalación y configuración.</a>
     2.1 <a href = "#estableciendo">Estableciendo la identidad del usuario.</a>
