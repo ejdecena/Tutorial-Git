@@ -44,7 +44,7 @@
 
 [GIT](https://git-scm.com/book/es/v2) es un [sistema de control de versiones](https://es.wikipedia.org/wiki/Control_de_versiones) que nos permite:
 
-1. Trabajar en equipo de forma remota, simple y óptima mientras estamos desarrollando software.
+1. Trabajar en equipo de forma remota, simple y óptima mientras desarrollamos software.
 
 2. Controlar y hacer seguimiento de todos los cambios en el código fuente, pudiendo volver atrás en el tiempo y abrir diferentes ramas de desarrollo.
 
@@ -88,7 +88,7 @@ color.branch=auto
 color.interactive=auto
 color.diff=auto
 ```
-Opcionalmente también pueden establecerse el **editor** por defecto a usar para los *commits*, y establecer mostar sólo una línea por cada `commit` en la traza:
+Opcionalmente también pueden establecerse el **editor** por defecto a usar para los *commits*, y establecer mostrar sólo una línea por cada `commit` en la traza:
 ```bash
 $ git config --global core.editor [nombre-editor]
 $ git config --global format.pretty oneline
@@ -112,7 +112,7 @@ Sin embargo, existen dos formas adicionales para obtener ayuda de *Git* que se p
 
 Con *Git*  se pueden crear nuevos repositorios básicamente de dos maneras:
 
-1. Convirtiendo una carpeta (directorio) en repositorio ejecutando la instrucción `git init` dentro del directorio; o también, si el directorio no existe, puede crearse con el comando `git init [nuevo-repositorio]` que automáticamente creará el `nuevo-repositorio`.
+1. Convirtiendo una carpeta (directorio) en repositorio ejecutando la instrucción `git init` dentro del directorio; o también, si el directorio no existe, puede crearse con el comando `git init [nuevo-repositorio]` que automáticamente creará el directorio con el nombre `nuevo-repositorio`.
 
 2. La otra forma de crear un nuevo repositorio es *clonándolo* desde otra ubicación con el comando `git clone [nombre-repositorio] [dirección URL/URI]`. Por defecto *Git* establece [nombre-repositorio] a *origin* si no se especifica. Por ejemplo, para clonar este repositorio localmente basta con hacer `git clone https://github.com/ejdecena/tutorial_git.git`, el cual creará un directorio local con el nombre de *tutorial_git*. Si se quiere clonar el repositorio a un directorio con otro nombre distinto al original, se puede especificar un tercer parámetro al comando `git clone [nombre-repositorio] [dirección URL/URI] [nombre-directorio]`. Por ejemplo el comando `git clone https://github.com/ejdecena/tutorial_git.git mi_repo` creará el directorio `mi_repo` con el repositorio clonado.
 
@@ -122,7 +122,7 @@ Con *Git*  se pueden crear nuevos repositorios básicamente de dos maneras:
 
 ## 4. Flujo de trabajo local.
 
-Los archivos en *Git* pasan por 3 fases diferentes en forma local:
+Los archivos en un repositorio local *Git* pasan por 3 fases diferentes:
 
 1. **_Working Directory_** (Directorio de Trabajo).
 2. **_Staging Área_** (Área de Preparación o *Index*).
@@ -152,7 +152,7 @@ Para pasar nuestro código del *Staging Area* al *Git Directory* lo hacemos con 
 
 ### 4.3 Fase 3: *Git Directory* (*HEAD*).
 
-Una vez que el código esta *confirmado* ya está listo para actualizarse con un servidor remoto de *Git* (*GitHub*, *GitLab*, *Bitbucket*, etc.) como veremos más adelante.
+Una vez que el código esta *confirmado* ya está listo para actualizarse en un servidor remoto de *Git* (*GitHub*, *GitLab*, *Bitbucket*, etc.) como veremos más adelante.
 
 <a name = "ignorar"></a>
 
@@ -164,9 +164,9 @@ En general, el **flujo de trabajo local** básico en *Git* podríamos resumirlo 
 
 1. Modificas una serie de archivos en el *Working Directory*.
 2. Preparas los archivos añadiéndolos al *Staging Area* con `git add`.
-3. Confirmas los cambios con `git commit`, pasando los archivos al *Git Directory* y haciendo de este modo una copia instantánea y permanente en tu directorio de *Git*.
+3. Confirmas los cambios con `git commit`, pasando así los archivos al *Git Directory* creando una copia instantánea y permanente en tu directorio de *Git*.
 
-En algunos casos el paso 2, pasar los archivos al *Staging Area*, puede **omitirse** del *flujo de trabajo*, de tal manera que podemos pasar los archivos **directamente** del *Working Directory* al *Git Directory* añadiendo la opción `-a` al comando `git commit`.
+En algunos casos la Fase 2, pasar los archivos al *Staging Area*, puede **omitirse** del *flujo de trabajo*, de tal manera que podemos pasar los archivos **directamente** del *Working Directory* al *Git Directory* añadiendo la opción `-a` al comando `git commit`.
 
 <a name = "ejemplos"></a>
 
@@ -187,7 +187,7 @@ $ git commit -m "Agregando nueva función."
 $ git add .
 $ git commit -m "Se refactorizó las clases no asociadas."
 ```
-4. Agrega todos los cambios del *Working Directory* **directamente** al *Git Directory* (se omite el paso 2 pero ruta completa):
+4. Agrega todos los cambios del *Working Directory* **directamente** al *Git Directory* (se omite la Fase 2, pero ruta completa):
 ```bash
 $ git commit -am "Cambio de formatos."
 ```
@@ -288,7 +288,7 @@ En `desarrollo` creamos nuevos archivos y modificamos archivos ya existentes. Pa
 $ git commit -am "Agregando cambios finales a desarrollo."
 $ git checkout master
 ```
-Estando ya en la rama `master` podemos **unir** (*merge*) los cambios en `desarrollo` así:
+Estando ya en la rama `master` podemos **unir** (*merge*) los cambios en la rama `desarrollo` así:
 ```bash
 $ git merge desarrollo
 ```
@@ -308,7 +308,7 @@ Hasta ahora hemos trabajado en forma local con nuestro repositorio; sin embargo,
 ```bash
 $ git remote add [nombre-repositorio] [URL/URI]
 ```
-Nuestro repositorio local puede tener establecidos **varios** repositorios remotos, esto en el caso que estemos trabajando con varios colaboradores. Esta flexibilidad es posible porque *Git* es un sistema de control de versiones [**distribuído**](https://es.wikipedia.org/wiki/Control_de_versiones_distribuido), es decir que cada colaborador (*Nodo*) tiene una misma **copia completa** de nuestro repositorio. Para ver una lista de los repositorios remotos *linkeados* a nuestro repositorio local basta con ejecutar el siguiente comando: 
+Nuestro repositorio local puede tener establecidos **varios** repositorios remotos, esto en el caso que estemos trabajando con varios colaboradores. Esta flexibilidad es posible porque *Git* es un sistema de [**control de versiones distribuído**](https://es.wikipedia.org/wiki/Control_de_versiones_distribuido); es decir, que cada colaborador (*Nodo*) tiene una misma **copia completa** de nuestro repositorio. Para ver una lista de los repositorios remotos *linkeados* a nuestro repositorio local basta con ejecutar el siguiente comando: 
 ```bash
 $ git remote -v
 ```
@@ -324,7 +324,7 @@ Para **eliminar** un repositorio remoto *linkeado* a nuestro repositorio local p
 
 ### 7.2 Inspeccionando un remoto.
 
-Para ver información sobre un repositorio remoto en particular, puedes ejecutar el comando `git remote show [nombre-remoto]`. Si ejecutas el comando con un nombre en particular, como `origin` verás algo como lo siguiente:
+Para ver información sobre un repositorio remoto en particular, podemos ejecutar el comando `git remote show [nombre-remoto]`. Si ejecutamos el comando con un nombre en particular, como `origin` verás algo como lo siguiente:
 ```bash
 * remote origin
   Fetch URL: https://github.com/ejdecena/tutorial_git.git
@@ -364,7 +364,7 @@ y *Git* entenderá que deberá hacer el *push* al `origin master`.
 
 ### 7.4 Actualizando el repositorio local.
 
-Has **dos** maneras de actualizar el repositorio local con los datos en el repositorio remoto, a través de los comandos `git pull` y `git fetch`.
+Has **dos** maneras de actualizar el repositorio local con los datos del repositorio remoto, a través de los comandos `git pull` y `git fetch`.
 
 * El comando `git pull [nombre-remoto] [rama-remota]` **automáticamente combinará** (hará un *merge*) de la [rama-remota] con la rama local en la que nos encontremos, por ejemplo si localmente estamos en la rama `master` hará un *merge* con la rama `master` del repositorio remoto.
 
@@ -380,7 +380,7 @@ En todo repositorio local existe una **rama oculta** que puedes ver al ejecutar 
 
 Para contribuir en un proyecto de *GitHub* en el que no tengas permisos de escritura (*push*), debes *bifurcar* (hacer un *fork*) sobre el repositorio correspondiente. Esto consiste básicamente en crear una copia completa del repositorio, totalmente bajo tu control, que se almacenará en tu cuenta de *GitHub* y en la cual podrás escribir sin limitaciones.
 
-De esta forma, los proyectos no necesitan añadir colaboradores con acceso *push*. Los usuarios pueden simplemente *bifurcar* un proyecto, enviar sus cambios **a la copia** en su repositorio en *GitHub* y luego remitir esos cambios al propietario del repositorio original para su consideración creando un *Pull Request*. Esto permite abrir una discusión para la revisión del código, donde propietario y usuarios pueden comunicarse acerca de los cambios y, en última instancia, el propietario original puede aceptarlos e integrarlos o no en el proyecto original cuando lo considere adecuado. Para más información sobre el proceso de contribución en los proyectos de *GitHub* puede consultar [**aquí.**](https://git-scm.com/book/es/v2/GitHub-Participando-en-Proyectos)
+De esta forma, los proyectos no necesitan añadir colaboradores con acceso *push*. Los usuarios pueden simplemente *bifurcar* un proyecto, enviar sus cambios **a la copia** en su repositorio en *GitHub* y luego remitir esos cambios al propietario del repositorio original para su revisión mediante la creación de un *Pull Request*. Esto permite abrir una discusión para la revisión del código, donde propietario y usuarios pueden comunicarse acerca de los cambios y, en última instancia, el propietario original puede aceptarlos e integrarlos o no en el proyecto original cuando lo considere conveniente. Para más información sobre el proceso de contribución en los proyectos de *GitHub* puede consultar [**aquí.**](https://git-scm.com/book/es/v2/GitHub-Participando-en-Proyectos)
 
 La plataforma *GitHub* tiene una amplia guía de documentación de servicios, tal y como se muestran en la siguiente lista:
 
