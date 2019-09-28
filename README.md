@@ -1,5 +1,5 @@
 <div align = "center">
-    <img src = "imagenes/logo_git.jpg" />
+    <img src = "imagenes/logo_git.png" width = "70" height = "70" />
 </div>
 
 # Tutorial GIT.
