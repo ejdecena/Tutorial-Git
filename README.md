@@ -1,3 +1,7 @@
+<div align = "center">
+    <img src = "imagenes/logo_git.jpeg" />
+</div>
+
 # Tutorial GIT.
 
 *Tutorial GIT* es una guía básica para comprender y usar las principales funcionalidades del sistema de control de versiones *Git*.
