@@ -2,6 +2,8 @@
     <img src = "imagenes/logo_git.png" width = "70" height = "70" />
 </div>
 
+<a name = "cabecera"></a>
+
 # Creación y gestión de ramas.
 
 El manejo de *ramas* es muy sencillo en *Git* y básicamente se reduce a 3 comandos:

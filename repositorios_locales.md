@@ -2,6 +2,8 @@
     <img src = "imagenes/logo_git.png" width = "70" height = "70" />
 </div>
 
+<a name = "cabecera"></a>
+
 # Creando repositorios locales.
 
 Con *Git*  se pueden crear nuevos repositorios básicamente de dos maneras:

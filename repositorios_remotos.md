@@ -2,6 +2,8 @@
     <img src = "imagenes/logo_git.png" width = "70" height = "70" />
 </div>
 
+<a name = "cabecera"></a>
+
 # Agregar y gestionar repositorios remotos.
 
 Hasta ahora hemos trabajado en forma local con nuestro repositorio; sin embargo, es deseable que podamos compartir nuestro código con otros colaboradores en forma remota. Para ello debemos *linkear* nuestro repositorio local con uno o varios repositorios remotos de la siguiente manera:

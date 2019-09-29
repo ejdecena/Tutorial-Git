@@ -2,6 +2,8 @@
     <img src = "imagenes/logo_git.png" width = "70" height = "70" />
 </div>
 
+<a name = "cabecera"></a>
+
 # Herramientas adicionales Git.
 
 Los 4 comandos de la sección anterior son básicos para el *flujo de trabajo* local y de algún modo son suficientes, pero existen 3 comandos adicionales que **complementan** las tareas: `git diff`, `git log` y `git tag`.

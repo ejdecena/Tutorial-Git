@@ -2,6 +2,8 @@
     <img src = "imagenes/logo_git.png" width = "70" height = "70" />
 </div>
 
+<a name = "cabecera"></a>
+
 # Flujo de trabajo local.
 
 Los archivos en un repositorio local *Git* pasan por 3 fases diferentes:

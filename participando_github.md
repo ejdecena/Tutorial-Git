@@ -2,6 +2,8 @@
     <img src = "imagenes/logo_git.png" width = "70" height = "70" />
 </div>
 
+<a name = "cabecera"></a>
+
 # Participando en proyectos de GitHub.
 
 Para contribuir en un proyecto de *GitHub* en el que no tengas permisos de escritura (*push*), debes *bifurcar* (hacer un *fork*) sobre el repositorio correspondiente. Esto consiste básicamente en crear una copia completa del repositorio, totalmente bajo tu control, que se almacenará en tu cuenta de *GitHub* y en la cual podrás escribir sin limitaciones.
