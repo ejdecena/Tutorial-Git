@@ -10,10 +10,6 @@
 
 2. Controlar y hacer seguimiento de todos los cambios en el código fuente, pudiendo volver atrás en el tiempo y abrir diferentes ramas de desarrollo.
 
-<a href = "#indice">[IR AL ÍNDICE]</a>
-
-<a name = "instalacion"></a>
-
 ## Instalación y configuración.
 
 Para instalar *Git* en un sistema operativo *Linux* con paquetería *apt* (*Debian*, *Ubuntu*, *Linux Mint*, etc) basta con ejecutar el siguiente comando desde la terminal:
@@ -62,4 +58,4 @@ $ git help [comando]
 ```
 Sin embargo, existen dos formas adicionales para obtener ayuda de *Git* que se pueden consultar [**aquí**](https://git-scm.com/book/es/v2/Inicio---Sobre-el-Control-de-Versiones-¿Cómo-obtener-ayuda%3F)
 
-<a href = "#README.md">[IR AL ÍNDICE]</a>
+<a href = "README.md#indice">[IR AL ÍNDICE]</a>
