@@ -21,4 +21,4 @@ La plataforma *GitHub* tiene una amplia guía de documentación de servicios, ta
 * [Mastering Markdown.](https://guides.github.com/features/mastering-markdown/)
 * [Documenting your projects on *GitHub*.](https://guides.github.com/features/wikis/)
 
-<a href = "README.md">[IR AL ÍNDICE]</a>
+<a href = "README.md#indice">[IR AL ÍNDICE]</a>

@@ -83,4 +83,4 @@ Como podemos notar, en el *flujo de trabajo* local básico solo manejamos 4 coma
 3. `git reset HEAD` para **retroceder** y pasar los cambios del *Staging Area* al *Working Directory*
 4. `git checkout --` para **retroceder** y pasar los cambios del *Git Directory* al *Working Directory*.
 
-<a href = "README.md">[IR AL ÍNDICE]</a>
+<a href = "README.md#indice">[IR AL ÍNDICE]</a>
