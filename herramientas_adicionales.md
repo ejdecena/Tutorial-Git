@@ -11,8 +11,9 @@ Los 4 comandos de la sección anterior son básicos para el *flujo de trabajo* l
 ## Observando las diferencias entre archivos.
 
 Siempre es posible ver los cambios o diferencias de los archivos en las distintas fases, por ejemplo:
-* `git diff` muestra las diferencias entre los archivos entre el *Working Directory* y *Staging Area*. 
-* `git diff --staged` muestra las diferencias entre los archivos entre el *Staging Area* y el *Git Directory*.
+* `git diff` muestra las diferencias de los archivos entre el *Working Directory* y *Staging Area*.
+* `git diff HEAD` muestra las diferencias de los archivos entre el *Working Directory* y *Git Directory*. 
+* `git diff --staged` muestra las diferencias de los archivos entre el *Staging Area* y el *Git Directory*.
 
 El comando `git diff` tiene múltiples opciones que pueden leerse [**aquí**](https://git-scm.com/book/es/v2/Fundamentos-de-Git-Guardando-cambios-en-el-Repositorio).
 
