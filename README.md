@@ -20,7 +20,7 @@
 1. [Git. Instalación y configuración.](git_instalacion_configuracion.md#cabecera)
 1. [Creando repositorios locales.](repositorios_locales.md#cabecera)
 1. [Flujo de trabajo local.](flujo_trabajo_local.md#cabecera)
-1. [Herramientas adicionales Git.](herramientas_aadicionales.md#cabecera)
+1. [Herramientas adicionales Git.](herramientas_adicionales.md#cabecera)
 1. [Creación y gestión de ramas.](creacion_gestion_ramas.md#cabecera)
 1. [Agregar y gestionar repositorios remotos.](repositorios_remotos.md#cabecera)
 1. [Participando en proyectos de GitHub.](participando_github.md#cabecera)

@@ -22,11 +22,11 @@ En esta fase podemos hacer cualquier cambio en los archivos sin afectar nuestro 
 
 Una vez que hemos hecho los cambios necesarios, pasamos nuestros archivos al *Staging Area* (*Index*) con el comando `git add [archivos]`. Si existen más archivos modificados que queramos pasar podemos listarlos con `git add archivo1.py archivo2.py ...`, o también con el comando `git add .` agregamos **todos** los archivos modificados del *Working Directory* al *Staging Area*.
 
-Cuando se pasan los archivos del *Working Directory* al *Staging Area*, se cambia el estado del código de *modificado* a *preparado*. Para **deshacer** los cambios de **un archivo** en el *Working Directory* con el **último** *commit*, debe usarse el comando `git checkout -- [archivo]`. Los archivos que estén en el *Staging Area* no serán modificados. Para **deshacer todos** los cambios en el *Working Directory* por un *commit* en particular, debemos usar el comando `git checkout [id_commit]`. El `id_commit` podemos obtenerlo con el comando `git log --oneline`.
+Cuando se pasan los archivos del *Working Directory* al *Staging Area*, se cambia el estado del código de *modificado* a *preparado*. Para **deshacer** los cambios de **un archivo** en el *Working Directory* debe usarse el comando `git checkout -- [archivo]`. Los archivos que estén en el *Staging Area* no serán modificados. Para **deshacer todos** los cambios en el *Working Directory* por un *commit* en particular, debemos usar el comando `git checkout [commit_id] [archivos]`. El `id_commit` podemos obtenerlo con el comando `git log --oneline`.
 
 ## Fase 2: *Staging Area* (*Index*).
 
-Para pasar nuestro código del *Staging Area* al *Git Directory* lo hacemos con el comando `git commit -m "[descripción del commit]"`. Hay distintas modalidades para el comando `git commit`que pueden leerse [**aquí**](https://git-scm.com/book/es/v2/Fundamentos-de-Git-Guardando-cambios-en-el-Repositorio). Cuando hacemos el `commit` el código pasa del estado *preparado* a *confirmado*. Para **devolver** **un archivo** del *Staging Área* al *Working Directory* debe ejecutarse `git reset HEAD [archivo]`. Para devolver **todos** los cambios del *Staging Area* al *Working Directory* debemos ejecutar `git reset --hard`.
+Para pasar nuestro código del *Staging Area* al *Git Directory* lo hacemos con el comando `git commit -m "[descripción del commit]"`. Hay distintas modalidades para el comando `git commit`que pueden leerse [**aquí**](https://git-scm.com/book/es/v2/Fundamentos-de-Git-Guardando-cambios-en-el-Repositorio). Cuando hacemos el `commit` el código pasa del estado *preparado* a *confirmado*. Para **sacar** **un archivo** del *Staging Área* al *Working Directory* debe ejecutarse `git reset HEAD [archivo]`. Para devolver **todos** los cambios del *Staging Area* al *Working Directory* debemos ejecutar `git reset --hard`. En ambos casos el *Working Directory* no se alterará
 
 ## Fase 3: *Git Directory* (*HEAD*).
 
@@ -65,13 +65,13 @@ $ git commit -m "Se refactorizó las clases no asociadas."
 ```bash
 $ git commit -am "Cambio de formatos."
 ```
-5. Agrega los `archivo1.py` y `archivo2.py` del *Working Directory* al *Git Directory*, luego se arrepiente y devuelve el archivo1.py al *Working Area* para finalmente pasar solo el archivo2.py al *Git Directory* (ruta incompleta):
+5. Agrega `archivo1.py` y `archivo2.py` al *Stanging Area*, luego saca el `archivo1.py` para finalmente pasar solo el `archivo2.py` al *Git Directory* con el *commit* (ruta incompleta):
 ```bash
 $ git add archivo1.py archivo2.py
 $ git reset HEAD archivo1.py
 $ git commit -m "Corrección del error en el archivo2.py"
 ```
-6. Igual que el ejemplo anterior, luego del *commit* modifica el `archivo2.py`, se arrepiente de los cambios y lo restituye con la versión del repositorio:
+6. Igual que el ejemplo anterior, luego del *commit* modifica el `archivo2.py`, se arrepiente de los cambios y lo restituye con la versión del *Stanging Area*:
 ```bash
 $ git add archivo1.py archivo2.py
 $ git reset HEAD archivo1.py
@@ -82,7 +82,7 @@ $ git checkout -- archivo2.py
 Como podemos notar, en el *flujo de trabajo* local básico solo manejamos 4 comandos:
 1. `git add [archivos|.]` para pasar los cambios del *Working Directory* al *Staging Area*.
 2. `git commit [-a|-m|"mensaje"]` para pasar los cambios del *Staging Area* al *Git Directory*.
-3. `git reset [HEAD archivo |--hard]` para **retroceder** y pasar los cambios del *Staging Area* al *Working Directory*.
-4. `git checkout [-- archivo|commit_id]` para **retroceder** y pasar los cambios del *Git Directory* al *Working Directory*.
+3. `git reset [HEAD archivo |--hard]` para **sacar** los archivos del *Staging Area* sin cambiar el *Working Directory*.
+4. `git checkout [--|commit_id|archivo]` para **deshacer** y pasar los cambios del *Staging Area* (`-- archivo`) o del *Git Directory* (`commit_id`) al *Working Directory*.
 
 <a href = "README.md#indice">[IR AL ÍNDICE]</a>
