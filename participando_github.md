@@ -6,9 +6,9 @@
 
 # Participando en proyectos de GitHub.
 
-Para contribuir en un proyecto de *GitHub* en el que no tengas permisos de escritura (*push*), debes *bifurcar* (hacer un *fork*) sobre el repositorio correspondiente. Esto consiste básicamente en crear una copia completa del repositorio, totalmente bajo tu control, que se almacenará en tu cuenta de *GitHub* y en la cual podrás escribir sin limitaciones.
+Para contribuir en un proyecto de *GitHub* en el que no tengas permisos de escritura (*push*), debes *bifurcar* (hacer un *fork*) sobre el repositorio correspondiente. Esto consiste básicamente en crear una copia completa del repositorio, totalmente bajo tu control, que se almacenará en tu cuenta de *GitHub*, la cual podrás *clonar* localmente en tu máquina y luego actualizar sin limitaciones.
 
-De esta forma, los proyectos no necesitan añadir colaboradores con acceso *push*. Los usuarios pueden simplemente *bifurcar* un proyecto, enviar sus cambios **a la copia** en su repositorio en *GitHub* y luego remitir esos cambios al propietario del repositorio original para su revisión mediante la creación de un *Pull Request*, tal y como se muestra en la siguiente figura:
+De esta forma, los proyectos no necesitan añadir colaboradores con acceso *push*. Los usuarios pueden simplemente *bifurcar* un proyecto, luego clonar el *fork* localmente en sus máquinas, enviar sus cambios **a la copia** en su repositorio en *GitHub* y luego remitir esos cambios al propietario del repositorio original para su revisión mediante la creación de un *Pull Request*, tal y como se muestra en la siguiente figura:
 
 <p align = "center"><img src = "imagenes/github_contributing.png"/></p>
 
