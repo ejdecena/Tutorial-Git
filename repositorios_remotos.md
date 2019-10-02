@@ -66,4 +66,8 @@ Has **dos** maneras de actualizar el repositorio local con los datos del reposit
 
 En todo repositorio local existe una **rama oculta** que puedes ver al ejecutar `git branch -a`, esa rama oculta es `origin/master`. Al usar `git fetch` bajas los cambios del repositorio remoto a la rama oculta `origin/master`, luego tendrías que hacer un *merge* para combinarla con tu rama local haciendo `git merge origin/master`.
 
+Podemos actualizar el flujo de trabajo local incorporando la instancia del repositorio remoto, tal y como se muestra en la siguiente figura:
+
+<p align = "center"><img src = "imagenes/git_flujo_trabajo_remoto.png"/></p>
+
 <a href = "README.md#indice">[IR AL ÍNDICE]</a>
