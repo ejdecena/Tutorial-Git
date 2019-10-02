@@ -25,7 +25,7 @@
 1. [Agregar y gestionar repositorios remotos.](repositorios_remotos.md#cabecera)
 1. [Participando en proyectos de GitHub.](participando_github.md#cabecera)
 1. Referencias adicionales:
-    1. Repositorio de Andreas Mueller: [*Advanced Git*](https://github.com/amueller/advanced_git_nyu_2016/blob/master/Advanced%20Git.ipynb).
+    1. [*Advanced Git*](https://github.com/amueller/advanced_git_nyu_2016/blob/master/Advanced%20Git.ipynb), de Andreas Mueller.
 
 ## Contribuciones.
 
