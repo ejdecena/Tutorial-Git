@@ -8,7 +8,7 @@
 
 <img src="https://img.shields.io/badge/License-MIT-green" /> <img src="https://img.shields.io/badge/Markdown-1.0.1%20-blue" />
 
-## Desarrolladores.
+## Desarrollador.
 
 * [Ing. Edgard Decena.](mailto:edecena@gmail.com)
 
