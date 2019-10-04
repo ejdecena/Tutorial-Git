@@ -11,7 +11,6 @@
 ## Desarrolladores.
 
 * [Ing. Edgard Decena.](mailto:edecena@gmail.com)
-* [Ing. Luís Acevedo.](mailto:laar@protonmail.com)
 
 <a name = "indice"></a>
 
