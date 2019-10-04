@@ -23,7 +23,7 @@
 1. [Creación y gestión de ramas.](creacion_gestion_ramas.md#cabecera)
 1. [Agregar y gestionar repositorios remotos.](repositorios_remotos.md#cabecera)
 1. [Participando en proyectos de GitHub.](participando_github.md#cabecera)
-1. Referencias adicionales:
+1. **Referencias adicionales:**
     1. [*Advanced Git*](https://github.com/amueller/advanced_git_nyu_2016/blob/master/Advanced%20Git.ipynb), de Andreas Mueller.
     1. [*Atlassian Git Cheatsheet.*](documentos/atlassian-git-cheatsheet.pdf)
 
